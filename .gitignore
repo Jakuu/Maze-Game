@@ -4,9 +4,10 @@ CEN4020 Maze Game/Library
 CEN4020 Maze Game/Obj
 CEN4020 Maze Game/UnityGenerated
 CEN4020 Maze Game/Builds
-CEN4020 Maze Game/*.sln
+CEN4020 Maze Game/*.slnj
 CEN4020 Maze Game/Assembly-CSharp.csproj
 *.suo
 *.user
 *.userprefs
+*.lock
 CEN4020 Maze Game/Temp/UnityLockfile
