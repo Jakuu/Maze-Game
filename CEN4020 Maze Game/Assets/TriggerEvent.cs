@@ -7,18 +7,22 @@ using UnityEngine;
 
 public class TriggerEvent : MonoBehaviour
 {
-    public GameObject uiObject;
+    public GameObject winningText;
+    public GameObject gameOverText;
 
     private void Start()
     {
-        uiObject.SetActive(false);
+        winningText.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D player)
     {
         if (player.gameObject.tag == "Player")
         {
-            uiObject.SetActive(true);
+            // destroy text saying game over
+            Destroy(gameOverText);
+
+            winningText.SetActive(true);
             StartCoroutine("WaitForSec");
         }
     }
@@ -26,7 +30,7 @@ public class TriggerEvent : MonoBehaviour
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(5);
-        Destroy(uiObject);
+        Destroy(winningText);
         Destroy(gameObject);
     }
 }
