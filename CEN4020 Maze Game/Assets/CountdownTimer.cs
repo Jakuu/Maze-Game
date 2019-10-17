@@ -13,7 +13,7 @@ public class CountdownTimer : MonoBehaviour
     public GameObject gameOverText;
     public GameObject winningText;
 
-    float currentTime = 0;
+    float currentTime;
     float startingTime = 20;
 
     [SerializeField] Text countdownText;
@@ -37,7 +37,6 @@ public class CountdownTimer : MonoBehaviour
             StartCoroutine("WaitForSec");
         }
     }
-
     IEnumerator WaitForSec()
     {
         yield return new WaitForSeconds(5);

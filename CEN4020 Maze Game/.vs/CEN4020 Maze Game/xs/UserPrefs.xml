@@ -1,0 +1,27 @@
+﻿<Properties StartupConfiguration="{1EFE9581-549E-BF7F-B8CF-E1AC8CF4E737}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/CountdownTimer.cs">
+    <Files>
+      <File FileName="Assets/PauseMenu.cs" Line="1" Column="15" />
+      <File FileName="Assets/TitleScreen.cs" Line="1" Column="9" />
+      <File FileName="Assets/CountdownTimer.cs" Line="23" Column="39" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CEN4020 Maze Game" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="CountdownTimer.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="cc7e5307-4c55-4971-a50e-713eca983fe8" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
