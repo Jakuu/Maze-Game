@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+// Jason Hamilton
 public class ItemObjective : IObjective
 {
     private bool _status = false;
