@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+//Jason Hamilton
+
 namespace Objectives
 {
     public class ObjectiveCollection : MonoBehaviour
