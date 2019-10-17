@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\CountdownTimer.cs" />
-     <Compile Include="Assets\ItemTrigger.cs" />
+     <Compile Include="Assets\IObjective.cs" />
+     <Compile Include="Assets\ItemObjective.cs" />
+     <Compile Include="Assets\KeyTrigger.cs" />
      <Compile Include="Assets\PlayerMovement.cs" />
      <Compile Include="Assets\TriggerEvent.cs" />
      <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />

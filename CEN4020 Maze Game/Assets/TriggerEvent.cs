@@ -9,6 +9,7 @@ public class TriggerEvent : MonoBehaviour
 {
     public GameObject winningText;
     public GameObject gameOverText;
+    public KeyTrigger keyObj;
 
     private void Start()
     {
@@ -19,11 +20,14 @@ public class TriggerEvent : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            // destroy text saying game over
-            Destroy(gameOverText);
+            if(keyObj.isComplete())
+            {
+                // destroy text saying game over
+                Destroy(gameOverText);
 
-            winningText.SetActive(true);
-            StartCoroutine("WaitForSec");
+                winningText.SetActive(true);
+                StartCoroutine("WaitForSec");
+            }
         }
     }
 
