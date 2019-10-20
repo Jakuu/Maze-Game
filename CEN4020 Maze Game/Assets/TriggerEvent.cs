@@ -4,12 +4,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TriggerEvent : MonoBehaviour
 {
     public GameObject winningText;
     public GameObject gameOverText;
-    public KeyTrigger keyObj;
 
     private void Start()
     {
@@ -20,14 +20,12 @@ public class TriggerEvent : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            if(keyObj.isComplete())
-            {
-                // destroy text saying game over
-                Destroy(gameOverText);
-
-                winningText.SetActive(true);
-                StartCoroutine("WaitForSec");
-            }
+            // destroy text saying game over
+            Destroy(gameOverText);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            winningText.SetActive(true);
+            StartCoroutine("WaitForSec");
+      
         }
     }
 
