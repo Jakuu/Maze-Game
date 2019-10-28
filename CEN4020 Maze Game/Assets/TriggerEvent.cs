@@ -18,7 +18,7 @@ public class TriggerEvent : MonoBehaviour
     public GameObject gameOverText;
 
     // the key object that has to be collected before exiting the maze in order to win
-    public KeyTrigger keyObj;
+    public ChestTrigger keyObj;
 
     // hide the winning text from the screen
     private void Start()

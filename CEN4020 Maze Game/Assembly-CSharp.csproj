@@ -10,8 +10,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <ProjectGuid>{1EFE9581-549E-BF7F-B8CF-E1AC8CF4E737}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -63,6 +62,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ChestTrigger.cs" />
     <Compile Include="Assets\CountdownTimer.cs" />
     <Compile Include="Assets\IObjective.cs" />
     <Compile Include="Assets\ItemObjective.cs" />
@@ -90,7 +90,6 @@
     <None Include="Assets\BayatGames\Free Platform Game Assets\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="ClassDiagram1.cd" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
