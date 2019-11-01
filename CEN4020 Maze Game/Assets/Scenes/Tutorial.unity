@@ -992,8 +992,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b98600c814528d428b7386206849856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningText: {fileID: 0}
-  gameOverText: {fileID: 0}
+  winningText: {fileID: 592048724}
+  gameOverText: {fileID: 1918091989}
 --- !u!58 &1168197568
 CircleCollider2D:
   m_ObjectHideFlags: 0
