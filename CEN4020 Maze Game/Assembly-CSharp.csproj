@@ -55,7 +55,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CountdownTimer.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -64,17 +63,18 @@
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleExamples.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ParticleMenu.cs" />
      <Compile Include="Assets\EffectExamples\TutorialInfo\Scripts\Readme.cs" />
-     <Compile Include="Assets\EnemyMovement.cs" />
-     <Compile Include="Assets\Go2Level1.cs" />
-     <Compile Include="Assets\IObjective.cs" />
-     <Compile Include="Assets\ItemObjective.cs" />
-     <Compile Include="Assets\KeyTrigger.cs" />
-     <Compile Include="Assets\PauseMenu.cs" />
-     <Compile Include="Assets\PlayerMovement.cs" />
-     <Compile Include="Assets\PlayerStats.cs" />
-     <Compile Include="Assets\PowerUp.cs" />
-     <Compile Include="Assets\TitleScreen.cs" />
-     <Compile Include="Assets\TriggerEvent.cs" />
+     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
+     <Compile Include="Assets\Scripts\Go2Level1.cs" />
+     <Compile Include="Assets\Scripts\IObjective.cs" />
+     <Compile Include="Assets\Scripts\ItemObjective.cs" />
+     <Compile Include="Assets\Scripts\KeyTrigger.cs" />
+     <Compile Include="Assets\Scripts\PauseMenu.cs" />
+     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+     <Compile Include="Assets\Scripts\PowerUps.cs" />
+     <Compile Include="Assets\Scripts\TitleScreen.cs" />
+     <Compile Include="Assets\Scripts\TriggerEvent.cs" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
@@ -101,6 +101,9 @@
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Tilemap.Extras.Editor">
+ <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
@@ -113,23 +116,26 @@
  <Reference Include="Unity.CollabProxy.Editor">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Editor">
+ <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.Postprocessing.Runtime">
+ <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.2D.Tilemap.Editor">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.2D.Tilemap.Extras">
+ <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Extras.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
