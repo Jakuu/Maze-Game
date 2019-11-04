@@ -6,11 +6,17 @@ public class KeyTrigger : MonoBehaviour
 {
     private SpriteRenderer _sprite;
     private ItemObjective _objective;
+    private Animator _animator = null;
+
+    public GameObject chestOpened;
 
     void Start()
     {
         _sprite = this.gameObject.GetComponent<SpriteRenderer>();
         _objective = new ItemObjective("key");
+
+        _animator = GetComponent<Animator>();
+        chestOpened.SetActive(false);
     }
 
     public bool isComplete()
@@ -23,8 +29,10 @@ public class KeyTrigger : MonoBehaviour
     {
         if (player.gameObject.tag == "Player")
         {
-            _sprite.enabled = false;
             _objective.Complete();
+            _animator.Play("Chest Animation");
+            _sprite.enabled = false;
+            chestOpened.SetActive(true);
         }
     }
 }

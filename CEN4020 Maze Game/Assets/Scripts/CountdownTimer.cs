@@ -14,7 +14,7 @@ public class CountdownTimer : MonoBehaviour
     public GameObject winningText;
 
     float currentTime;
-    float startingTime = 20;
+    float startingTime = 60;
 
     [SerializeField] Text countdownText;
 
@@ -27,7 +27,7 @@ public class CountdownTimer : MonoBehaviour
     private void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0.00");
+        countdownText.text = currentTime.ToString("0.0");
 
         if (currentTime <= 0)
         {
