@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class PowerUps : MonoBehaviour
+public class PowerUp : MonoBehaviour
 {
     //public GameObject pickupEffect;
     public float multiplier = 1.4f;
-
     public GameObject tilemapGameObject;
     Tilemap tilemap;
 

@@ -8,13 +8,14 @@ public class KeyTrigger : MonoBehaviour
     private ItemObjective _objective;
     private Animator _animator = null;
 
+    public BoxCollider2D _collider;
+
     public GameObject chestOpened;
 
     void Start()
     {
         _sprite = this.gameObject.GetComponent<SpriteRenderer>();
         _objective = new ItemObjective("key");
-
         _animator = GetComponent<Animator>();
         chestOpened.SetActive(false);
     }
@@ -33,6 +34,7 @@ public class KeyTrigger : MonoBehaviour
             _animator.Play("Chest Animation");
             _sprite.enabled = false;
             chestOpened.SetActive(true);
+            _collider.isTrigger = true;
         }
     }
 }

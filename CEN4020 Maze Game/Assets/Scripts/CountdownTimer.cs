@@ -43,4 +43,9 @@ public class CountdownTimer : MonoBehaviour
         Destroy(gameOverText);
         Destroy(gameObject);
     }
+
+    public void AddTime(float x)
+    {
+        currentTime += x;
+    }
 }

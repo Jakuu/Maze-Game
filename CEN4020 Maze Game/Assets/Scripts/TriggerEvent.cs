@@ -20,6 +20,9 @@ public class TriggerEvent : MonoBehaviour
     // the key object that has to be collected before exiting the maze in order to win
     public KeyTrigger keyObj;
 
+    // so that door can later be set to a trigger after objective is complete
+    private BoxCollider2D _collider = null;
+
     // hide the winning text from the screen
     private void Start()
     {
