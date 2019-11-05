@@ -1,4 +1,7 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Tilemaps;
 
 //Jason Hamilton
 
@@ -7,10 +10,10 @@ public class KeyTrigger : MonoBehaviour
     private SpriteRenderer _sprite;
     private ItemObjective _objective;
     private Animator _animator = null;
-
-    public BoxCollider2D _collider;
-
     public GameObject chestOpened;
+
+    public GameObject tilemapGameObject;
+    Tilemap tilemap;
 
     void Start()
     {
@@ -18,6 +21,11 @@ public class KeyTrigger : MonoBehaviour
         _objective = new ItemObjective("key");
         _animator = GetComponent<Animator>();
         chestOpened.SetActive(false);
+
+        if (tilemapGameObject != null)
+        {
+            tilemap = tilemapGameObject.GetComponent<Tilemap>();
+        }
     }
 
     public bool isComplete()
@@ -34,7 +42,9 @@ public class KeyTrigger : MonoBehaviour
             _animator.Play("Chest Animation");
             _sprite.enabled = false;
             chestOpened.SetActive(true);
-            _collider.isTrigger = true;
+
+            // set null
+            tilemap.ClearAllTiles();
         }
     }
 }
