@@ -74,6 +74,7 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\PowerUp.cs" />
+     <Compile Include="Assets\Scripts\ScoreCount.cs" />
      <Compile Include="Assets\Scripts\TitleScreen.cs" />
      <Compile Include="Assets\Scripts\TriggerEvent.cs" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
@@ -123,6 +124,9 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Unity.2D.Sprite.Editor">
+ <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
@@ -137,9 +141,6 @@
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Unity.2D.Sprite.Editor">
- <HintPath>C:/Users/abbey/Desktop/Fall 2019/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2019.2.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

@@ -31,6 +31,9 @@ public class PowerUp : MonoBehaviour
 
             // apply effect to player
             PlayerStats stats = player.GetComponent<PlayerStats>();
+            if (stats.score == 0)
+                stats.score = 100;
+
             stats.score *= multiplier;
         }
     }
