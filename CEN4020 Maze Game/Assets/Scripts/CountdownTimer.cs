@@ -14,7 +14,7 @@ public class CountdownTimer : MonoBehaviour
     public GameObject winningText;
 
     float currentTime;
-    float startingTime = 60;
+    float startingTime = 30;
 
     [SerializeField] Text countdownText;
 

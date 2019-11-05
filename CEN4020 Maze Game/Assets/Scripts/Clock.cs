@@ -33,6 +33,7 @@ public class Clock : MonoBehaviour
             // apply effect to timer
             timer.AddTime(5.0f);
            
+           
         }
     }
 }

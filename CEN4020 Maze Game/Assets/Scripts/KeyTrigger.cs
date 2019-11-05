@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-//Jason Hamilton and Abbey Centers
+// Jason Hamilton and Abbey Centers
 
 
 public class KeyTrigger : MonoBehaviour
