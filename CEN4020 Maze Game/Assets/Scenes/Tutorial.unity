@@ -797,8 +797,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: RESUME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -973,6 +973,7 @@ GameObject:
   - component: {fileID: 1168197569}
   - component: {fileID: 1168197568}
   - component: {fileID: 1168197567}
+  - component: {fileID: 1168197571}
   m_Layer: 0
   m_Name: NewSceneTrigger
   m_TagString: Untagged
@@ -987,13 +988,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168197566}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6b98600c814528d428b7386206849856, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   winningText: {fileID: 592048724}
   gameOverText: {fileID: 1918091989}
+  keyObj: {fileID: 0}
 --- !u!58 &1168197568
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1073,6 +1075,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1168197571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168197566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868f0733d10415d47901a776082e908e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winningText: {fileID: 0}
+  gameOverText: {fileID: 0}
 --- !u!1 &1312454290
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,7 +1285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522195448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 152a8544250be472cb85aa8639b517d1, type: 3}
+  m_Script: {fileID: 11500000, guid: f15f5d6601e78694384dbc7372b23fb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 278610249}
@@ -1545,8 +1561,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
