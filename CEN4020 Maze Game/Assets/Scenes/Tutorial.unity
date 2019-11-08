@@ -663,11 +663,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 628487657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b44e51af52362c4a8789ce9ae0713eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 84904e9bb5fc34755ba1c26c916e74d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  rb: {fileID: 628487663}
+  rb: {fileID: 0}
 --- !u!50 &628487663
 Rigidbody2D:
   serializedVersion: 4
@@ -797,8 +797,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: RESUME
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1285,7 +1285,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1522195448}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f15f5d6601e78694384dbc7372b23fb2, type: 3}
+  m_Script: {fileID: 11500000, guid: d55f2602f5f424aa8843fa4233daf655, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 278610249}
@@ -1561,8 +1561,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: QUIT
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: cdc5e83a3686ba74cbefd75a1468ffc7, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1747,7 +1747,7 @@ TilemapRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
-  m_ChunkCullingBounds: {x: 0.78, y: 0.78, z: 0}
+  m_ChunkCullingBounds: {x: 0.5, y: 0.5, z: 0}
   m_MaxChunkCount: 16
   m_MaxFrameAge: 16
   m_SortOrder: 0
