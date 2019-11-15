@@ -25,6 +25,6 @@ public class ItemObjective : IObjective
 
     public string getRequirements()
     {
-        return ($"Obtain: {_requirements}");
+        return _requirements;
     }
 }
