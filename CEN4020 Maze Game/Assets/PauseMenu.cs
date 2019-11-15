@@ -11,6 +11,7 @@ public class PauseMenu : MonoBehaviour
 
     public GameObject pauseMenu;
     public GameObject optionsMenu;
+    public GameObject deadMenu;
 
     public int index;
     [SerializeField] bool keyDown;
@@ -103,6 +104,21 @@ public class PauseMenu : MonoBehaviour
                         pauseMenu.SetActive(true);
                         maxIndex = 2;
                         index = 1;
+                    }
+                }
+                if (deadMenu.activeSelf == true)
+                {
+                    if (index == 0)
+                    {
+
+                    }
+                    else if (index == 1)
+                    {
+
+                    }
+                    else if (index == 2)
+                    {
+
                     }
                 }
             }
