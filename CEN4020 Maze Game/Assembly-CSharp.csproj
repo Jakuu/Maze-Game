@@ -68,7 +68,10 @@
     <Compile Include="Assets\IObjective.cs" />
     <Compile Include="Assets\ItemObjective.cs" />
     <Compile Include="Assets\KeyTrigger.cs" />
+    <Compile Include="Assets\MenuButton.cs" />
+    <Compile Include="Assets\MenuController.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
+    <Compile Include="Assets\PauseMenuButton.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\TitleScreen.cs" />
     <Compile Include="Assets\TriggerEvent.cs" />

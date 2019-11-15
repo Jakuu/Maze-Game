@@ -10,24 +10,101 @@ public class PauseMenu : MonoBehaviour
     public static bool IsPaused = false;
 
     public GameObject pauseMenu;
+    public GameObject optionsMenu;
+
+    public int index;
+    [SerializeField] bool keyDown;
+    [SerializeField] int maxIndex;
 
     private void Start()
     {
         pauseMenu.SetActive(false);
     }
-
     // Update is called once per frame
     void Update()
     {
+        // If the player Presses 'P' the game pauses
         if (Input.GetKeyDown(KeyCode.P))
         {
-            if (IsPaused)
-            {
-                Resume();
-            }
-            else
+            if (!IsPaused)
             {
                 Pause();
+            }
+        }
+        // While the game is paused
+        if (IsPaused)
+        {
+            if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                if (!keyDown)
+                {
+                    if (index < maxIndex)
+                    {
+                        index++;
+                    }
+                    else
+                    {
+                        index = 0;
+                    }
+                }
+            }
+            if (Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if (!keyDown)
+                {
+                    if (index > 0)
+                    {
+                        index--;
+                    }
+                    else
+                    {
+                        index = maxIndex;
+                    }
+                }
+            }
+            // When player activates button
+            if (Input.GetKeyUp(KeyCode.Space))
+            {
+                if (pauseMenu.activeSelf == true)
+                {
+                    if (index == 0)
+                    {
+                        Resume();
+                    }
+                    else if (index == 1)
+                    {
+                        optionsMenu.SetActive(true);
+                        pauseMenu.SetActive(false);
+                        maxIndex = 3;
+                        index = 0;
+                    }
+                    else if (index == 2)
+                    {
+                        QuitGame();
+                    }
+                }
+                if (optionsMenu.activeSelf == true)
+                {
+                    if (index == 0)
+                    {
+                        
+                    }
+                    else if (index == 1)
+                    {
+                        
+                    }
+                    else if (index == 2)
+                    {
+                        
+                    }
+                    else if (index == 3)
+                    {
+                        optionsMenu.SetActive(false);
+                        pauseMenu.SetActive(true);
+                        maxIndex = 2;
+                        index = 1;
+                    }
+                }
             }
         }
     }
@@ -49,6 +126,7 @@ public class PauseMenu : MonoBehaviour
     public void QuitGame()
     {
         IsPaused = false;
+        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         SceneManager.LoadScene(0);
     }
