@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level - Jason.unity
     guid: 5ae54150e830847fd91281a701bc2cb4
   - enabled: 1
-    path: Assets/Scenes/Level 2.unity
-    guid: 99e99739bec364c828e0bf7dfabc01d4
+    path: Assets/Scenes/Level - David.unity
+    guid: e42bd4aaab1574fe391f3deb4a984980
+  - enabled: 1
+    path: Assets/Scenes/Level - Abbey.unity
+    guid: a0709797a81bc4df8a93f4db85613b7a
+  - enabled: 1
+    path: Assets/Scenes/Level - Paul.unity
+    guid: 38b2f5cb3dbe94767aef2293bb4bddfa
   m_configObjects: {}
