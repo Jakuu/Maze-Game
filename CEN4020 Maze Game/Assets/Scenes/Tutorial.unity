@@ -414,10 +414,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 628487657}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b44e51af52362c4a8789ce9ae0713eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 348d7afa1041046ecaa39b5d8bd3dc69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawn: {fileID: 0}
+  hit: {fileID: 0}
   moveSpeed: 5
+  health: 3
   rb: {fileID: 628487663}
 --- !u!50 &628487663
 Rigidbody2D:
@@ -583,11 +586,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1168197566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b98600c814528d428b7386206849856, type: 3}
+  m_Script: {fileID: 11500000, guid: 183dcd4a389394688a4aea3ab2fb1b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winningText: {fileID: 1665994211}
-  gameOverText: {fileID: 1665994211}
+  winningText: {fileID: 0}
+  gameOverText: {fileID: 0}
+  keyObj: {fileID: 0}
 --- !u!58 &1168197568
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1792,15 +1796,15 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 254215955717405745, guid: 87a593f5efadb4c568f3c904731c4e4b,
-        type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 1312454291}
     - target: {fileID: 254215956984043206, guid: 87a593f5efadb4c568f3c904731c4e4b,
         type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 254215955717405745, guid: 87a593f5efadb4c568f3c904731c4e4b,
+        type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1312454291}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87a593f5efadb4c568f3c904731c4e4b, type: 3}
