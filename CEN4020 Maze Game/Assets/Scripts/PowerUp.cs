@@ -45,8 +45,9 @@ public class PowerUp : MonoBehaviour
             // get the y position of the player
             hitPosition.y = 1;// player.transform.position.y;
 
+            Destroy(this);
 
-            tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
+            //tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
 
             Debug.Log("hit position x: " + hitPosition.x + " and position y: " + hitPosition.y);
             //Grid grid = transform.parent.GetComponent<Grid>();
@@ -60,7 +61,7 @@ public class PowerUp : MonoBehaviour
 
             // use the player's current position to find and hide the power-up tile at that position
             //tilemap.SetTile(tPos, null);
-
+            
 
             BoundsInt bounds = tilemap.cellBounds;
             TileBase[] allTiles = tilemap.GetTilesBlock(bounds);
