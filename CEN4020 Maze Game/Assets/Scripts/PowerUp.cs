@@ -35,6 +35,7 @@ public class PowerUp : MonoBehaviour
         // if the tilemap member has been assigned and the gameobject tag corresponds to the player
         if (tilemap != null && player.gameObject.tag == "Player")
         {
+            Debug.Log("found it\n");
             // get the x position of the player
             hitPosition.x = player.transform.position.x;
 
