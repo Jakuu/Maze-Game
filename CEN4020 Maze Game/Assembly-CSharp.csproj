@@ -90,7 +90,6 @@
     <Compile Include="Assets\Scripts\Saw2Movement.cs" />
     <Compile Include="Assets\Scripts\ScoreCount.cs" />
     <Compile Include="Assets\Scripts\TriggerEvent.cs" />
-    <Compile Include="Assets\Scripts\TriggerSimple.cs" />
     <Compile Include="Assets\TitleScreen.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
