@@ -4135,7 +4135,7 @@ Transform:
   m_GameObject: {fileID: 271129080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 659617360}
   m_RootOrder: 0
@@ -4207,7 +4207,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4237,27 +4237,27 @@ Tilemap:
     m_Data:
       e00: NaN
       e01: NaN
-      e02: -1.937283e+30
-      e03: 1.26e-43
+      e02: 0
+      e03: 0
       e10: NaN
       e11: NaN
-      e12: 4.5908e-41
+      e12: 0
       e13: 0
       e20: 0
-      e21: -1.9372819e+30
-      e22: 1.0469247e-38
-      e23: -8.095413e-12
+      e21: 0
+      e22: 0
+      e23: 0
       e30: 0
-      e31: 4.5908e-41
-      e32: 3.949078e-39
-      e33: 9.14e-43
+      e31: 0
+      e32: 0
+      e33: 0
   m_TileColorArray:
   - m_RefCount: 0
-    m_Data: {r: -2.4614553e-36, g: -2.4614553e-36, b: -2.4614553e-36, a: -2.4614553e-36}
+    m_Data: {r: -3.5869658e+19, g: -3.5869658e+19, b: -3.5869658e+19, a: -3.5869658e+19}
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Origin: {x: -13, y: -1, z: 0}
-  m_Size: {x: 13, y: 1, z: 1}
+  m_Origin: {x: -24, y: -2, z: 0}
+  m_Size: {x: 24, y: 2, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -5019,7 +5019,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -3338749442709606003, guid: 693ef27846c3e498396cd3e408578ca8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5372,7 +5372,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -3338749442709606003, guid: 693ef27846c3e498396cd3e408578ca8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -5589,7 +5589,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -3338749442709606003, guid: 693ef27846c3e498396cd3e408578ca8,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

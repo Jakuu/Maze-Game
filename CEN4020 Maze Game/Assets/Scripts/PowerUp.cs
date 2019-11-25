@@ -40,14 +40,14 @@ public class PowerUp : MonoBehaviour
         {
             Debug.Log("found");
             // get the x position of the player
-            hitPosition.x = 0;// player.transform.position.x;
+            hitPosition.x = player.transform.position.x;
 
             // get the y position of the player
-            hitPosition.y = 1;// player.transform.position.y;
+            hitPosition.y = player.transform.position.y;
 
-            Destroy(this);
+           // Destroy(this);
 
-            //tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
+            tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
 
             Debug.Log("hit position x: " + hitPosition.x + " and position y: " + hitPosition.y);
             //Grid grid = transform.parent.GetComponent<Grid>();
