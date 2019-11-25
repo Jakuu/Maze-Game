@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: Animated Coin Tile
+  m_Name: Coin
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
   - {fileID: -3338749442709606003, guid: 693ef27846c3e498396cd3e408578ca8, type: 3}
