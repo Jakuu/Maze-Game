@@ -45,19 +45,27 @@ public class PowerUp : MonoBehaviour
             // get the y position of the player
             hitPosition.y = player.transform.position.y;
 
+            //hitPosition.z = 1;
+
            // Destroy(this);
+          //  tilemap.ClearAllTiles();
+           tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
 
-            tilemap.SetTile(tilemap.WorldToCell(hitPosition), null);
-
-            Debug.Log("hit position x: " + hitPosition.x + " and position y: " + hitPosition.y);
+           // Debug.Log("hit position x: " + hitPosition.x + " and position y: " + hitPosition.y);
+           
+            
             //Grid grid = transform.parent.GetComponent<Grid>();
-           // Vector3Int tPos = tilemap.WorldToCell(player.transform.position);
-
-           // Vector3Int tPos = player.transform.position;
-           // Debug.Log("name : " + tilemap.GetTile(lPos).name + " & position : " + lPos);
+            //Vector3Int tPos = tilemap.WorldToCell(player.transform.position);
 
 
-           // tilemap.SetTile(tilemap.WorldToCell(lPos), null);
+           // Vector3Int worldPos = grid.Camera.main.ScreenToWorldPoint(mousePos);
+           // tilePos = tilemap.WorldToCell(worldPos);
+          //  Vector3Int tPos = tilemap.GetCellCenterLocal(tilemap.WorldToCell(player.transform.position)
+           
+            Debug.Log("pos : " + player.transform.position);// + " & position : " + tPos);
+
+
+            //tilemap.SetTile(tilemap.WorldToCell(worldPos), null);
 
             // use the player's current position to find and hide the power-up tile at that position
             //tilemap.SetTile(tPos, null);
@@ -73,6 +81,7 @@ public class PowerUp : MonoBehaviour
                     TileBase tile = allTiles[x + y * bounds.size.x];
                     if (tile != null)
                     {
+                        tilemap.SetTile(new Vector3Int(-7,-1,1), null);
                         Debug.Log("x:" + x + " y:" + y + " tile:" + tile.name);
 
                     }

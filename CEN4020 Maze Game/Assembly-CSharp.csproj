@@ -68,6 +68,7 @@
      <Compile Include="Assets\MenuController.cs" />
      <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\PauseMenuButton.cs" />
+     <Compile Include="Assets\PowerUp_.cs" />
      <Compile Include="Assets\Scripts\ButtonTrigger.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
      <Compile Include="Assets\Scripts\CountdownTimer.cs" />

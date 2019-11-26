@@ -5,6 +5,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using UnityEngine.Tilemaps;
+
 public class PlayerMovement : MonoBehaviour
 {
     private GameObject instObject;
@@ -15,6 +17,11 @@ public class PlayerMovement : MonoBehaviour
 
     Vector2 movement;
 
+
+    public GameObject tilemapGameObject;
+    Tilemap tilemap;
+
+   
 
     // Update is called once per frame
     void Update()
@@ -48,5 +55,6 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+   
 
 }
