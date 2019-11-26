@@ -21,7 +21,6 @@ public class CountdownTimer : MonoBehaviour
     private void Start()
     {
         gameOverText.SetActive(false);
-        winningText.SetActive(false);
         currentTime = startingTime;
     }
 

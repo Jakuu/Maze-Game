@@ -35,7 +35,7 @@ public class TriggerEvent : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             // if the key has been collected / the objective has been completed
-            if (keyObj.isComplete())
+            //if (keyObj.isComplete())
             {
                 // destroy text that could display game over message
                 Destroy(gameOverText);
