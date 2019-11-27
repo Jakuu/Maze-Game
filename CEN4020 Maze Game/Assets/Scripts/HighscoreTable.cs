@@ -25,10 +25,8 @@ public class HighscoreTable : MonoBehaviour
 
     private void Awake()
     {
-
         //PlayerPrefs.DeleteAll();
         updateTable();
-
     }
 
 
