@@ -34,6 +34,8 @@ public class TriggerEvent : MonoBehaviour
     // set active/unactive
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject canvasPause;
+    [SerializeField] GameObject background;
+
 
     // the key object that has to be collected before exiting the maze in order to win
     //public KeyTrigger keyObj;
@@ -45,6 +47,7 @@ public class TriggerEvent : MonoBehaviour
         GetLeaderboardNameUI.SetActive(false);
         HighScoreUI.SetActive(false);
         deadMenu.SetActive(false);
+        background.SetActive(false);
     }
 
     // this function takes a player object as a parameter
@@ -115,12 +118,13 @@ public class TriggerEvent : MonoBehaviour
                 Debug.Log("min: " + min);
             }
 
-            winMenu.SetActive(true);
+            winMenu.SetActive(false);
             pauseMenu.SetActive(false);
             canvasPause.SetActive(true);
             Time.timeScale = 0f;
             PauseMenu.IsPaused = true;
             HighScoreUI.SetActive(false);
+            background.SetActive(true);
 
            
             //if (stats.score > min)
@@ -156,7 +160,8 @@ public class TriggerEvent : MonoBehaviour
         {
             if (Input.GetKeyDown(key))
             {
-                done = true; // breaks the loop
+                if (leaderboardName.text != "")
+                    done = true; // breaks the loop
 
                 // add user to leaderboard ONLY IF THEY ARE IN TOP 10
 
@@ -164,11 +169,16 @@ public class TriggerEvent : MonoBehaviour
                 // this is only used to initialize the table
                // if (leaderboard.highscoreEntryList.Count == 1 && leaderboard.highscoreEntyrList[0].score == -1)
                  //   leaderboard.ClearTable();
-                leaderboardName.text = "---";
-                leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
-                leaderboard.updateTable();
-                HighScoreUI.SetActive(true);
-                leaderboardName.text = "";
+
+                if (done == true)
+                {
+                    leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
+                    leaderboard.updateTable();
+                    winMenu.SetActive(true);
+                    HighScoreUI.SetActive(true);
+                    background.SetActive(false);
+                    leaderboardName.text = "";
+                }
 
 
             }

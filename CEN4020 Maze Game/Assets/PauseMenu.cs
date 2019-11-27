@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject optionsMenu;
     public GameObject deadMenu;
     public GameObject winMenu;
+    public GameObject background;
 
     public int index;
     [SerializeField] bool keyDown;
@@ -21,6 +22,7 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         pauseMenu.SetActive(false);
+        background.SetActive(false);
     }
     // Update is called once per frame
     void Update()
