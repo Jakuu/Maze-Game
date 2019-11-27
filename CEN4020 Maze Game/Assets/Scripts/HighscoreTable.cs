@@ -119,11 +119,9 @@ public class HighscoreTable : MonoBehaviour
 
         int score = highscoreEntry.score;
 
-        entryTransform.Find("scoreText").GetComponent<Text>().text = "";
         entryTransform.Find("scoreText").GetComponent<Text>().text = score.ToString();
 
         string name = highscoreEntry.name;
-        entryTransform.Find("nameText").GetComponent<Text>().text = "";
         entryTransform.Find("nameText").GetComponent<Text>().text = name;
 
         // Set background visible odds and evens, easier to read
@@ -158,7 +156,7 @@ public class HighscoreTable : MonoBehaviour
         transformList.Add(entryTransform);
     }
 
-    public void AddHighscoreEntry(int score, string name)
+    public int AddHighscoreEntry(int score, string name)
     {
         // Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
@@ -176,14 +174,46 @@ public class HighscoreTable : MonoBehaviour
             };
         }
 
-        // Add new entry to Highscores
-        highscores.highscoreEntryList.Add(highscoreEntry);
+        // check that the name is unique from the top ten
+        int k = 0;
+        int match = 0;
+       
+        foreach (HighscoreEntry entry in highscores.highscoreEntryList)
+        {
+            if (k == 10)
+                break;
 
-        // Save updated Highscores
-        string json = JsonUtility.ToJson(highscores);
-        PlayerPrefs.SetString("highscoreTable", json);
-        PlayerPrefs.Save();
+            if (entry.name == name)
+                match = 1; break;
+
+            Debug.Log("name: " + highscores.highscoreEntryList[k].name);
+            k++;
+        }
+
+        if (match == 0)
+        {
+            Debug.Log("name unique");
+            // Add new entry to Highscores
+            highscores.highscoreEntryList.Add(highscoreEntry);
+
+            // Save updated Highscores
+            string json = JsonUtility.ToJson(highscores);
+            PlayerPrefs.SetString("highscoreTable", json);
+            PlayerPrefs.Save();
+            return 1;
+        }
+        else 
+        { 
+            // display error message
+            Debug.Log("name not unique");
+            return 0;
+        
+        }
+
     }
+
+
+
 
     private class Highscores
     {

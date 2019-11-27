@@ -15,6 +15,8 @@ public class TriggerEvent : MonoBehaviour
 
     public GameObject player;
     public GameObject highScoreTable;
+    public GameObject errMsg;
+
 
     // get name from user
     [SerializeField] Text leaderboardName;
@@ -48,6 +50,8 @@ public class TriggerEvent : MonoBehaviour
         HighScoreUI.SetActive(false);
         deadMenu.SetActive(false);
         background.SetActive(false);
+        errMsg.SetActive(false);
+
     }
 
     // this function takes a player object as a parameter
@@ -128,10 +132,18 @@ public class TriggerEvent : MonoBehaviour
 
            
             //if (stats.score > min)
+            // if number of entries is > 10 and new score is greater than min, put in top ten
+            // if (highscores.highscoreEntryList.Count > 10 && stats.score > min)
             {
                 // get player name for high score table
                 StartCoroutine(getName(stats, leaderboard));            
             }
+            /*
+             else
+             {
+               // if there are less than ten leaderboard scores, add new score  
+             }
+             */
 
         }
     }
@@ -165,19 +177,25 @@ public class TriggerEvent : MonoBehaviour
 
                 // add user to leaderboard ONLY IF THEY ARE IN TOP 10
 
-                // if only one entry and the score for that entry is, remove it
-                // this is only used to initialize the table
-               // if (leaderboard.highscoreEntryList.Count == 1 && leaderboard.highscoreEntyrList[0].score == -1)
-                 //   leaderboard.ClearTable();
-
                 if (done == true)
                 {
-                    leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
-                    leaderboard.updateTable();
-                    winMenu.SetActive(true);
-                    HighScoreUI.SetActive(true);
-                    background.SetActive(false);
-                    leaderboardName.text = "";
+                    // if name isn't unique
+                    if (leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text) == 0)
+                    {
+                        done = false;
+                        StartCoroutine(errorMessage());
+                    }
+                    else
+                    {
+                        // set error message inactive
+                        errMsg.SetActive(false);
+                        winMenu.SetActive(true);
+                        HighScoreUI.SetActive(true);
+                        background.SetActive(false);
+                        HighScoreUI.SetActive(true);
+                        leaderboard.updateTable();
+                        leaderboardName.text = "";
+                    }
                 }
 
 
@@ -191,6 +209,15 @@ public class TriggerEvent : MonoBehaviour
 
 
 
+
+    private IEnumerator errorMessage()
+    {
+        // set error message active
+        errMsg.SetActive(true);
+
+        yield return new WaitForSeconds(3.0f);
+
+    }
 
 
     private class Highscores
