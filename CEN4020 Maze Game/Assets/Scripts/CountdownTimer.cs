@@ -12,7 +12,7 @@ public class CountdownTimer : MonoBehaviour
     // game over text
 
     float currentTime;
-    float startingTime = 10;
+    [SerializeField] float startingTime;
 
     [SerializeField] Text countdownText;
 
