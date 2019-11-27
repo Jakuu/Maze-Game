@@ -10,38 +10,37 @@ using UnityEngine.UI;
 public class CountdownTimer : MonoBehaviour
 {
     // game over text
-    public GameObject gameOverText;
-    public GameObject winningText;
 
     float currentTime;
-    float startingTime = 30;
+    float startingTime = 10;
 
     [SerializeField] Text countdownText;
 
+    [SerializeField] GameObject deadMenu;
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject canvasPause;
+
     private void Start()
     {
-        gameOverText.SetActive(false);
         currentTime = startingTime;
     }
 
     private void Update()
     {
         currentTime -= 1 * Time.deltaTime;
-        countdownText.text = currentTime.ToString("0.0");
+        countdownText.text = currentTime.ToString("00.00");
 
         if (currentTime <= 0)
         {
-            Destroy(winningText);
             currentTime = 0;
-            gameOverText.SetActive(true);
-            StartCoroutine("WaitForSec");
+            //pause game and display dead menu
+            //to be added later
+            deadMenu.SetActive(true);
+            pauseMenu.SetActive(false);
+            canvasPause.SetActive(true);
+            Time.timeScale = 0f;
+            PauseMenu.IsPaused = true;
         }
-    }
-    IEnumerator WaitForSec()
-    {
-        yield return new WaitForSeconds(5);
-        Destroy(gameOverText);
-        Destroy(gameObject);
     }
 
     public void AddTime(float x)

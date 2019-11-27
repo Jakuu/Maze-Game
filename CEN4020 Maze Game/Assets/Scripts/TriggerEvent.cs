@@ -12,18 +12,23 @@ using UnityEngine;
 public class TriggerEvent : MonoBehaviour
 {
     // winning text to display
-    public GameObject winningText;
+    [SerializeField] GameObject winMenu;
 
     // game over text to display
-    public GameObject gameOverText;
+    [SerializeField] GameObject deadMenu;
+
+    // set active/unactive
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject canvasPause;
 
     // the key object that has to be collected before exiting the maze in order to win
-    public KeyTrigger keyObj;
+    //public KeyTrigger keyObj;
 
     // hide the winning text from the screen
     private void Start()
     {
-        winningText.SetActive(false);
+        winMenu.SetActive(false);
+        deadMenu.SetActive(false);
     }
 
     // this function takes a player object as a parameter
@@ -35,23 +40,16 @@ public class TriggerEvent : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             // if the key has been collected / the objective has been completed
-            if (keyObj.isComplete())
-            {
+            //if (keyObj.isComplete())
+            //{
                 // destroy text that could display game over message
-                Destroy(gameOverText);
-
                 // display victory message to the user
-                winningText.SetActive(true);
-                StartCoroutine("WaitForSec");
-            }
+            winMenu.SetActive(true);
+            pauseMenu.SetActive(false);
+            canvasPause.SetActive(true);
+            Time.timeScale = 0f;
+            PauseMenu.IsPaused = true;
+            //}
         }
-    }
-
-    // destroy the current game object and message so that it is removed from the screen
-    IEnumerator WaitForSec()
-    {
-        yield return new WaitForSeconds(5);
-        Destroy(winningText);
-        Destroy(gameObject);
     }
 }

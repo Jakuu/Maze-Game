@@ -24,14 +24,14 @@ public class ScoreCount : MonoBehaviour
         stats = player.GetComponent<PlayerStats>();
 
         // set initial score text
-        scoreText.text = stats.score.ToString("0.0");
+        scoreText.text = stats.score.ToString("00000");
     }
 
     private void Update()
     {
         // score text remains at 0.0 until a power up is collected
         // this value is modifed in the PowerUp script
-        scoreText.text = stats.score.ToString("0.0");
+        scoreText.text = stats.score.ToString("00000");
     }
   
 }

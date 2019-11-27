@@ -12,6 +12,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject pauseMenu;
     public GameObject optionsMenu;
     public GameObject deadMenu;
+    public GameObject winMenu;
 
     public int index;
     [SerializeField] bool keyDown;
@@ -110,15 +111,36 @@ public class PauseMenu : MonoBehaviour
                 {
                     if (index == 0)
                     {
-
+                        Time.timeScale = 1f;
+                        IsPaused = false;
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
                     }
                     else if (index == 1)
                     {
-
+                        QuitGame();
                     }
                     else if (index == 2)
                     {
-
+                        Debug.Log("QUIT");
+                        Application.Quit();
+                    }
+                }
+                if (winMenu.activeSelf == true)
+                {
+                    if (index == 0)
+                    {
+                        //Next Level
+                        //SceneManager.LoadScene();
+                    }
+                    else if (index == 1)
+                    {
+                        //go to main menu
+                        QuitGame();
+                    }
+                    else if (index == 1)
+                    {
+                        Debug.Log("QUIT");
+                        Application.Quit();
                     }
                 }
             }
