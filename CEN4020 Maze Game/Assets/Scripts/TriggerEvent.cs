@@ -164,10 +164,11 @@ public class TriggerEvent : MonoBehaviour
                 // this is only used to initialize the table
                // if (leaderboard.highscoreEntryList.Count == 1 && leaderboard.highscoreEntyrList[0].score == -1)
                  //   leaderboard.ClearTable();
-                
+                leaderboardName.text = "---";
                 leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
                 leaderboard.updateTable();
                 HighScoreUI.SetActive(true);
+                leaderboardName.text = "";
 
 
             }

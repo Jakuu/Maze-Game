@@ -29,8 +29,6 @@ public class HighscoreTable : MonoBehaviour
         //PlayerPrefs.DeleteAll();
         updateTable();
 
-
-
     }
 
 
@@ -123,9 +121,11 @@ public class HighscoreTable : MonoBehaviour
 
         int score = highscoreEntry.score;
 
+        entryTransform.Find("scoreText").GetComponent<Text>().text = "";
         entryTransform.Find("scoreText").GetComponent<Text>().text = score.ToString();
 
         string name = highscoreEntry.name;
+        entryTransform.Find("nameText").GetComponent<Text>().text = "";
         entryTransform.Find("nameText").GetComponent<Text>().text = name;
 
         // Set background visible odds and evens, easier to read
