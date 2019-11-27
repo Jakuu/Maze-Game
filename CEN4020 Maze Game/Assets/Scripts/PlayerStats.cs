@@ -7,5 +7,5 @@ using UnityEngine;
 
 public class PlayerStats : MonoBehaviour
 {
-    public float score = 0.0f;
+    public int score = 0;
 }

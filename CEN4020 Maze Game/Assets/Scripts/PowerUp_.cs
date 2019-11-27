@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PowerUp_ : MonoBehaviour
 {
-    public float multiplier = 1.4f;
+    public int add = 25;
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -17,9 +17,9 @@ public class PowerUp_ : MonoBehaviour
         // apply effect to player
         PlayerStats stats = player.GetComponent<PlayerStats>();
         if (stats.score == 0)
-            stats.score = 100;
+            stats.score = 25;
 
-        stats.score *= multiplier;
+        stats.score += add;
         Destroy(gameObject);
     }
 }

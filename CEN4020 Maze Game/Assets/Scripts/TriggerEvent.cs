@@ -12,12 +12,14 @@ using UnityEngine;
 public class TriggerEvent : MonoBehaviour
 {
 
-    [SerializeField] GameObject player;
+    public GameObject player;
+    public GameObject highScoreTable;
+
+    // high score UI
+    [SerializeField] GameObject HighScoreUI;
 
     // winning text to display
-    public GameObject winMenu;
-
-    [SerializeField] GameObject highScoreTable;
+    [SerializeField] GameObject winMenu;
 
     // game over text to display
     [SerializeField] GameObject deadMenu;
@@ -33,7 +35,7 @@ public class TriggerEvent : MonoBehaviour
     private void Start()
     {
         winMenu.SetActive(false);
-        highScoreTable.SetActive(false);
+        HighScoreUI.SetActive(false);
         deadMenu.SetActive(false);
     }
 
@@ -58,7 +60,7 @@ public class TriggerEvent : MonoBehaviour
 
 
             winMenu.SetActive(true);
-            highScoreTable.SetActive(true);
+            HighScoreUI.SetActive(true);
             pauseMenu.SetActive(false);
             canvasPause.SetActive(true);
             Time.timeScale = 0f;

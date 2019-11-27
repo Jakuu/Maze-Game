@@ -9,7 +9,7 @@ using UnityEngine.Tilemaps;
 public class PowerUp : MonoBehaviour
 {
     // amount to add to the player's score
-    public float multiplier = 1.4f;
+    public int multiplier = 25;
 
     // tilemap gameobject to apply script to --> PowerUps
     public GameObject tilemapGameObject;
@@ -49,7 +49,7 @@ public class PowerUp : MonoBehaviour
             if (stats.score == 0)
                 stats.score = 100;
 
-            stats.score *= multiplier;
+            stats.score += multiplier;
         }
     }
 }
