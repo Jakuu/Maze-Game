@@ -57,6 +57,7 @@ public class TriggerEvent : MonoBehaviour
             PlayerStats stats = player.GetComponent<PlayerStats>();
             HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
             leaderboard.AddHighscoreEntry(stats.score, "Abbey");
+            leaderboard.Awake();
 
 
             winMenu.SetActive(true);

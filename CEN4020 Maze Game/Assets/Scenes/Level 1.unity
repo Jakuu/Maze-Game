@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &32945618
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &109938681
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3549,7 +3549,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &160168937
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3760,7 +3760,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &213985186
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -3993,7 +3993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &252454883
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4125,7 +4125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &252864342
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4468,7 +4468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &309848548
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4699,7 +4699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &319908836
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5420,7 +5420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &487452708
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5541,8 +5541,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5, y: 148.004}
-  m_SizeDelta: {x: 601.5, y: 426.2}
+  m_AnchoredPosition: {x: 2.5, y: 109.8}
+  m_SizeDelta: {x: 601.5, y: 502.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &511421854
 MonoBehaviour:
@@ -5631,8 +5631,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 147.2}
-  m_SizeDelta: {x: 502.5, y: 363}
+  m_AnchoredPosition: {x: 0, y: 109.8}
+  m_SizeDelta: {x: 502.5, y: 437.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &576411265
 MonoBehaviour:
@@ -6621,7 +6621,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &979315020
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7011,7 +7011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1128532765
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7143,7 +7143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1154929616
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7275,7 +7275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1254337685
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7745,7 +7745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1452263995
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8190,7 +8190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1566043570
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8460,7 +8460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1614026050
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8727,6 +8727,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6301629569615744668, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6121740601309644428, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
         type: 3}
       propertyPath: m_IsActive
@@ -8836,6 +8841,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570539281207, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -400
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569780370731, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570269506743, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -538
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570269506743, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569066067355, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -722
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569066067355, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570572377972, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570572377972, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -913
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570572377975, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9091faead9f4a9ebb536fbe103d9cf, type: 3}
@@ -9014,7 +9064,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1777947932
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9722,8 +9772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.5, y: 148.7}
-  m_SizeDelta: {x: 601.5, y: 427.6}
+  m_AnchoredPosition: {x: 2.5, y: 110.53}
+  m_SizeDelta: {x: 601.5, y: 503.95}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1842107945
 MonoBehaviour:
@@ -10020,7 +10070,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1903572745
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10306,7 +10356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &1972146599
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10797,7 +10847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &2017138126
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10929,7 +10979,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &2102679124
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11061,7 +11111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &2116579702
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11193,7 +11243,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &2118564207
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11325,7 +11375,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 25
+  add: 500
 --- !u!58 &2124221635
 CircleCollider2D:
   m_ObjectHideFlags: 0

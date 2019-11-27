@@ -22,7 +22,7 @@ public class HighscoreTable : MonoBehaviour {
     private Transform entryTemplate;
     private List<Transform> highscoreEntryTransformList;
 
-    private void Awake() {
+    public void Awake() {
         entryContainer = transform.Find("highscoreEntryContainer");
         entryTemplate = entryContainer.Find("highscoreEntryTemplate");
 
@@ -32,23 +32,11 @@ public class HighscoreTable : MonoBehaviour {
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         // clear entries
-        ClearTable(highscoreEntryTransformList);
+        //ClearTable(highscoreEntryTransformList);
 
         // Load high scores
-        jsonString = PlayerPrefs.GetString("highscoreTable");
-        highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
-        //if (highscores == null) {
-            // There's no stored table, initialize
-            //Debug.Log("Initializing table with default values...");
-            /*AddHighscoreEntry(1000000, "CMK");
-            AddHighscoreEntry(897621, "JOE");
-            AddHighscoreEntry(872931, "DAV");
-            AddHighscoreEntry(785123, "CAT");
-            AddHighscoreEntry(542024, "MAX");
-            AddHighscoreEntry(68245, "AAA");*/
-            // Reload
-        //}
+        //jsonString = PlayerPrefs.GetString("highscoreTable");
+        //highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         // Sort entry list by Score
         for (int i = 0; i < highscores.highscoreEntryList.Count; i++) {
@@ -63,7 +51,11 @@ public class HighscoreTable : MonoBehaviour {
         }
 
         highscoreEntryTransformList = new List<Transform>();
+        int k = 0;
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) {
+            if (k == 10)
+                break;
+            k++;
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
     }
