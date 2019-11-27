@@ -53,11 +53,35 @@ public class TriggerEvent : MonoBehaviour
                 // destroy text that could display game over message
                 // display victory message to the user
 
+
+
+
             // get player score
             PlayerStats stats = player.GetComponent<PlayerStats>();
+
+            // get leaderboard table
             HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
+
+            // add user to leaderboard ONLY IF THEY ARE IN TOP 10
             leaderboard.AddHighscoreEntry(stats.score, "Abbey");
             leaderboard.Awake();
+
+            // get min and max of leaderboard
+
+            // check if score is in top ten
+
+            // if yes, ask for user input
+
+            // create canvas similar to highscore table
+
+            // set it to active
+
+            // on key enter pressed, get input and add to highscore entry
+
+
+
+
+
 
 
             winMenu.SetActive(true);
