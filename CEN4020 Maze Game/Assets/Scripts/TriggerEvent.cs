@@ -54,17 +54,49 @@ public class TriggerEvent : MonoBehaviour
                 // display victory message to the user
 
 
-
-
             // get player score
             PlayerStats stats = player.GetComponent<PlayerStats>();
 
             // get leaderboard table
             HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
 
-            // add user to leaderboard ONLY IF THEY ARE IN TOP 10
-            leaderboard.AddHighscoreEntry(stats.score, "Abbey");
-            leaderboard.Awake();
+            // get min of top ten leaderboard scores
+
+            string jsonString = PlayerPrefs.GetString("highscoreTable");
+            Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+            // Sort entry list by Score
+            for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
+            {
+                for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
+                {
+                    if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
+                    {
+                        // Swap
+                        HighscoreEntry tmp = highscores.highscoreEntryList[i];
+                        highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
+                        highscores.highscoreEntryList[j] = tmp;
+                    }
+                }
+            }
+
+            // get tenth index
+            int min = highscores.highscoreEntryList[9].score;
+
+            Debug.Log("min: " + min);
+
+           
+           
+            if (stats.score > min)
+            {
+                Debug.Log("player in top ten");
+                // add user to leaderboard ONLY IF THEY ARE IN TOP 10
+                leaderboard.AddHighscoreEntry(stats.score, "Abbey");
+                leaderboard.Awake();
+            
+            
+            }
+
+            
 
             // get min and max of leaderboard
 
@@ -94,5 +126,24 @@ public class TriggerEvent : MonoBehaviour
 
             //}
         }
+    }
+
+
+
+
+
+    private class Highscores
+    {
+        public List<HighscoreEntry> highscoreEntryList;
+    }
+
+    /*
+     * Represents a single High score entry
+     * */
+    [System.Serializable]
+    private class HighscoreEntry
+    {
+        public int score;
+        public string name;
     }
 }

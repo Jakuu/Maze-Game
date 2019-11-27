@@ -20,7 +20,7 @@ public class HighscoreTable : MonoBehaviour {
 
     private Transform entryContainer;
     private Transform entryTemplate;
-    private List<Transform> highscoreEntryTransformList;
+    public List<Transform> highscoreEntryTransformList;
 
     public void Awake() {
         entryContainer = transform.Find("highscoreEntryContainer");
