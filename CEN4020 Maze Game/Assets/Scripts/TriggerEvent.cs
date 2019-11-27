@@ -44,6 +44,8 @@ public class TriggerEvent : MonoBehaviour
             //{
                 // destroy text that could display game over message
                 // display victory message to the user
+
+            Debug.Log("no its happening here");
             winMenu.SetActive(true);
             pauseMenu.SetActive(false);
             canvasPause.SetActive(true);
