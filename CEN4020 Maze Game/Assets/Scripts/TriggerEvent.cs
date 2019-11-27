@@ -11,8 +11,13 @@ using UnityEngine;
 
 public class TriggerEvent : MonoBehaviour
 {
+
+    [SerializeField] GameObject player;
+
     // winning text to display
-    [SerializeField] GameObject winMenu;
+    public GameObject winMenu;
+
+    [SerializeField] GameObject highScoreTable;
 
     // game over text to display
     [SerializeField] GameObject deadMenu;
@@ -28,6 +33,7 @@ public class TriggerEvent : MonoBehaviour
     private void Start()
     {
         winMenu.SetActive(false);
+        highScoreTable.SetActive(false);
         deadMenu.SetActive(false);
     }
 
@@ -45,12 +51,20 @@ public class TriggerEvent : MonoBehaviour
                 // destroy text that could display game over message
                 // display victory message to the user
 
-            Debug.Log("no its happening here");
+            // get player score
+            PlayerStats stats = player.GetComponent<PlayerStats>();
+            HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
+            leaderboard.AddHighscoreEntry(stats.score, "Abbey");
+
+
             winMenu.SetActive(true);
+            highScoreTable.SetActive(true);
             pauseMenu.SetActive(false);
             canvasPause.SetActive(true);
             Time.timeScale = 0f;
             PauseMenu.IsPaused = true;
+
+
             //}
         }
     }
