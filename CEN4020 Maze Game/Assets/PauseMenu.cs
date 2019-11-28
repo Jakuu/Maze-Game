@@ -137,7 +137,9 @@ public class PauseMenu : MonoBehaviour
                     if (index == 0)
                     {
                         //Next Level
-                        //SceneManager.LoadScene();
+                        Time.timeScale = 1f;
+                        IsPaused = false;
+                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                     }
                     else if (index == 1)
                     {

@@ -17,6 +17,7 @@ public class TriggerEvent : MonoBehaviour
     public GameObject highScoreTable;
     public GameObject errMsg;
     public GameObject background;
+    public string tableName;
 
     // get name from user
     [SerializeField] Text leaderboardName;
@@ -81,7 +82,7 @@ public class TriggerEvent : MonoBehaviour
             //HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
 
             // get min of top ten leaderboard scores
-            string jsonString = PlayerPrefs.GetString("highscoreTable");
+            string jsonString = PlayerPrefs.GetString(tableName);
             Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
 
@@ -99,8 +100,19 @@ public class TriggerEvent : MonoBehaviour
 
                 Debug.Log("min: " + min);
             }
-
-           
+           /* else
+            {
+                highscores = new Highscores()
+                {
+                    highscoreEntryList = new List<HighscoreEntry>()
+                };
+                // There's no stored table, initialize
+               // Debug.Log("Initializing table with default value...");
+                leaderboard.AddHighscoreEntry(-1, "---");
+                // Reload
+                jsonString = PlayerPrefs.GetString(tableName);
+                highscores = JsonUtility.FromJson<Highscores>(jsonString);
+            }*/
 
            
             // if number of entries is >= 10 and new score is greater than min, put in top ten
@@ -204,15 +216,18 @@ public class TriggerEvent : MonoBehaviour
                 if (leaderboardName.text != "")
                     done = true; // breaks the loop
 
-                // add user to leaderboard ONLY IF THEY ARE IN TOP 10
-
+                // add user to leaderboard
                 if (done == true)
                 {
-                    // if name isn't unique
                     leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
                     leaderboard.updateTable();
 
 
+            /*// try                    foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
+                    {
+                        CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+                    }
+               */
                     // reload and sort
                     //string jsonString = PlayerPrefs.GetString("highscoreTable");
                     //Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);

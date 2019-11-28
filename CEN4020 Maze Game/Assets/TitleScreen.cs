@@ -76,11 +76,11 @@ public class TitleScreen : MonoBehaviour
             {
                 if (menuController.index == 0)
                 {
-                    SceneManager.LoadScene(2);
+                    SceneManager.LoadScene(1);
                 }
                 else if (menuController.index == 1)
                 {
-                    SceneManager.LoadScene(3);
+                    SceneManager.LoadScene(2);
                 }
                 else if (menuController.index == 2)
                 {
