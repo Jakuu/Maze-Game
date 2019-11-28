@@ -456,6 +456,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &115541275 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6121740601309644428, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 712853679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &125993460
 GameObject:
   m_ObjectHideFlags: 0
@@ -4370,6 +4376,12 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &277505794 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6301629569615744668, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 712853679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &309848545
 GameObject:
   m_ObjectHideFlags: 0
@@ -4883,10 +4895,10 @@ MonoBehaviour:
   leaderboardName: {fileID: 1334175726}
   HighScoreUI: {fileID: 845122728}
   GetLeaderboardNameUI: {fileID: 581215023}
-  winMenu: {fileID: 0}
-  deadMenu: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  canvasPause: {fileID: 0}
+  winMenu: {fileID: 277505794}
+  deadMenu: {fileID: 1056690679}
+  pauseMenu: {fileID: 115541275}
+  canvasPause: {fileID: 1428993548}
 --- !u!1 &461460805
 GameObject:
   m_ObjectHideFlags: 0
@@ -5582,6 +5594,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6301629569615744668, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569615744662, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9091faead9f4a9ebb536fbe103d9cf, type: 3}
 --- !u!1 &735630919
@@ -6240,6 +6262,12 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &1056690679 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6121740600477021902, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 712853679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1118849913
 GameObject:
   m_ObjectHideFlags: 0
@@ -6334,9 +6362,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingTime: 30
   countdownText: {fileID: 1118849915}
-  deadMenu: {fileID: 0}
-  pauseMenu: {fileID: 0}
-  canvasPause: {fileID: 0}
+  deadMenu: {fileID: 1056690679}
+  pauseMenu: {fileID: 115541275}
+  canvasPause: {fileID: 1428993548}
 --- !u!1 &1128532762
 GameObject:
   m_ObjectHideFlags: 0
@@ -6925,6 +6953,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1428993548 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6121740600133049405, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+    type: 3}
+  m_PrefabInstance: {fileID: 712853679}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1452263992
 GameObject:
   m_ObjectHideFlags: 0
@@ -8252,7 +8286,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.7, y: -0.19}
+  m_AnchoredPosition: {x: -15.7, y: 1.7}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1807650790
