@@ -170,13 +170,25 @@ public class HighscoreTable : MonoBehaviour
             };
         }
 
+       
+        if (highscores != null)
+        {
+            // score entry of -1 used to initialize
+            // delete if it exists in the list
+            for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
+            {
+                if (highscores.highscoreEntryList[i].score == -1)
+                    highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[i]);
+            }
+
+            // delete item if list is already length of 10
+            if (highscores.highscoreEntryList.Count == 10)
+                highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
 
 
+        }
 
-        
-
-
-
+     
 
         // Add new entry to Highscores
         highscores.highscoreEntryList.Add(highscoreEntry);

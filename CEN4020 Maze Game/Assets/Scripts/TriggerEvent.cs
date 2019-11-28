@@ -113,7 +113,7 @@ public class TriggerEvent : MonoBehaviour
                 HighScoreUI.SetActive(false);
 
                 // delete lowest entry
-                highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
+               // highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
 
                 // get player name for high score table
                 StartCoroutine(getName(stats, leaderboard));            
