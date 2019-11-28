@@ -116,7 +116,8 @@ public class TriggerEvent : MonoBehaviour
                // highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
 
                 // get player name for high score table
-                StartCoroutine(getName(stats, leaderboard));            
+                StartCoroutine(getName(stats, leaderboard));
+
             }
             else if (highscores.highscoreEntryList.Count < 10)
             {
@@ -127,6 +128,7 @@ public class TriggerEvent : MonoBehaviour
                 PauseMenu.IsPaused = true;
                 HighScoreUI.SetActive(false);
                 StartCoroutine(getName(stats, leaderboard));
+
             }
             else
             {
@@ -135,8 +137,6 @@ public class TriggerEvent : MonoBehaviour
                 winMenu.SetActive(true);
                 Time.timeScale = 0f;
                 PauseMenu.IsPaused = true;
-
-                
 
                 
               /*  errMsg.SetActive(false);
