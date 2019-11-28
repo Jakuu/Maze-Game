@@ -35,7 +35,8 @@ public class CountdownTimer : MonoBehaviour
             currentTime = 0;
             //pause game and display dead menu
             //to be added later
-            Debug.Log("happening here");
+
+
 
             deadMenu.SetActive(true);
             pauseMenu.SetActive(false);

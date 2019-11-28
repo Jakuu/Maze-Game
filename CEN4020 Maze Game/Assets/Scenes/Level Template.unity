@@ -3662,6 +3662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 962455d3d451d4a84bcd0e89d5b663ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startingTime: 30
   countdownText: {fileID: 182454411}
   deadMenu: {fileID: 254215956203296928}
   pauseMenu: {fileID: 254215955353888994}
@@ -5139,10 +5140,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183dcd4a389394688a4aea3ab2fb1b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  highScoreTable: {fileID: 0}
+  errMsg: {fileID: 0}
+  leaderboardName: {fileID: 0}
+  HighScoreUI: {fileID: 0}
+  GetLeaderboardNameUI: {fileID: 0}
   winMenu: {fileID: 1010065650}
   deadMenu: {fileID: 254215956203296928}
   pauseMenu: {fileID: 254215955353888994}
   canvasPause: {fileID: 254215956530426451}
+  background: {fileID: 0}
 --- !u!61 &1305939510
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5741,10 +5749,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 183dcd4a389394688a4aea3ab2fb1b1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
+  highScoreTable: {fileID: 0}
+  errMsg: {fileID: 0}
+  leaderboardName: {fileID: 0}
+  HighScoreUI: {fileID: 0}
+  GetLeaderboardNameUI: {fileID: 0}
   winMenu: {fileID: 1010065650}
   deadMenu: {fileID: 254215956203296928}
   pauseMenu: {fileID: 254215955353888994}
   canvasPause: {fileID: 254215956530426451}
+  background: {fileID: 0}
 --- !u!61 &1801405636
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6324,7 +6339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 1.4
+  add: 25
 --- !u!58 &1940114077
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6618,7 +6633,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  multiplier: 1.4
+  add: 25
 --- !u!58 &2032710321
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6938,6 +6953,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasPause
       objectReference: {fileID: 0}
+    - target: {fileID: 6121740600477021902, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121740601309644428, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6121740600133049400, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7043,11 +7068,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6121740600477021902, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6121740601248208608, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -7072,11 +7092,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -400
-      objectReference: {fileID: 0}
-    - target: {fileID: 6121740601309644428, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9091faead9f4a9ebb536fbe103d9cf, type: 3}

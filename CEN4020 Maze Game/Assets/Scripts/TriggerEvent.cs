@@ -38,6 +38,8 @@ public class TriggerEvent : MonoBehaviour
     [SerializeField] GameObject canvasPause;
     [SerializeField] GameObject background;
 
+    HighscoreTable leaderboard;
+
 
     // the key object that has to be collected before exiting the maze in order to win
     //public KeyTrigger keyObj;
@@ -45,11 +47,12 @@ public class TriggerEvent : MonoBehaviour
     // hide the winning text from the screen
     private void Start()
     {
-        winMenu.SetActive(false);
         GetLeaderboardNameUI.SetActive(false);
+
         HighScoreUI.SetActive(false);
-        deadMenu.SetActive(false);
-        background.SetActive(false);
+
+        leaderboard = highScoreTable.GetComponent<HighscoreTable>();
+
         errMsg.SetActive(false);
 
     }
@@ -59,10 +62,11 @@ public class TriggerEvent : MonoBehaviour
     // this function is triggered when the player parameter comes in contact with the game object
     void OnTriggerEnter2D(Collider2D player)
     {
+
         // if the player is equal to our Player object
         if (player.gameObject.tag == "Player")
         {
-
+            int min = 0;
             // if the key has been collected / the objective has been completed
             //if (keyObj.isComplete())
             //{
@@ -73,7 +77,7 @@ public class TriggerEvent : MonoBehaviour
             PlayerStats stats = player.GetComponent<PlayerStats>();
 
             // get leaderboard table
-            HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
+            //HighscoreTable leaderboard = highScoreTable.GetComponent<HighscoreTable>();
 
             // get min of top ten leaderboard scores
             string jsonString = PlayerPrefs.GetString("highscoreTable");
@@ -83,68 +87,81 @@ public class TriggerEvent : MonoBehaviour
             // Sort entry list by Score
             if (highscores != null)
             {
-                if (highscores.highscoreEntryList.Count > 1)
-                {
-                    for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
-                    {
-                        for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
-                        {
-                            if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
-                            {
-                                // Swap
-                                HighscoreEntry tmp = highscores.highscoreEntryList[i];
-                                highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
-                                highscores.highscoreEntryList[j] = tmp;
-                            }
-                        }
-                    }
-                }
-
-
-
+                SortList(highscores);
 
                 // get min of top ten scores
-                int min;
-                if (highscores.highscoreEntryList.Count < 10)
-                {
-                    Debug.Log("less than 10");
-                    min = highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1].score;
-                }
-                else
+                if (highscores.highscoreEntryList.Count >= 10)
                 {
                     Debug.Log("greater than 10");
                     min = highscores.highscoreEntryList[9].score;
                 }
 
-
-
-
                 Debug.Log("min: " + min);
             }
 
-            winMenu.SetActive(false);
-            pauseMenu.SetActive(false);
-            canvasPause.SetActive(true);
-            Time.timeScale = 0f;
-            PauseMenu.IsPaused = true;
-            HighScoreUI.SetActive(false);
-            background.SetActive(true);
+           
 
            
-            //if (stats.score > min)
-            // if number of entries is > 10 and new score is greater than min, put in top ten
-            // if (highscores.highscoreEntryList.Count > 10 && stats.score > min)
+            // if number of entries is >= 10 and new score is greater than min, put in top ten
+            if (highscores.highscoreEntryList.Count >= 10 && stats.score > min)
             {
+                winMenu.SetActive(false);
+               // pauseMenu.SetActive(false);
+                canvasPause.SetActive(true);
+                Time.timeScale = 0f;
+                PauseMenu.IsPaused = true;
+                HighScoreUI.SetActive(false);
+                background.SetActive(true);
                 // get player name for high score table
                 StartCoroutine(getName(stats, leaderboard));            
             }
-            /*
-             else
-             {
-               // if there are less than ten leaderboard scores, add new score  
-             }
-             */
+            else if (highscores.highscoreEntryList.Count < 10)
+            {
+                winMenu.SetActive(false);
+                //pauseMenu.SetActive(false);
+                canvasPause.SetActive(true);
+                Time.timeScale = 0f;
+                PauseMenu.IsPaused = true;
+                HighScoreUI.SetActive(false);
+                background.SetActive(true);
+                // if there are less than ten leaderboard scores, add new score  
+                StartCoroutine(getName(stats, leaderboard));
+            }
+            else
+            {
+              /*  errMsg.SetActive(false);
+                HighScoreUI.SetActive(true);
+                background.SetActive(false);
+                pauseMenu.SetActive(false);
+                winMenu.SetActive(true);
+                canvasPause.SetActive(true);
+                Time.timeScale = 0f;
+                PauseMenu.IsPaused = true;*/
+            }
 
+            // don't prompt the user if the number of entries is >= 10 and score is less than min
+             
+
+        }
+    }
+
+    private void SortList(Highscores highscores)
+    {
+        if (highscores.highscoreEntryList.Count > 1)
+        {
+            for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
+            {
+                for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
+                {
+                    if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score)
+                    {
+                        // Swap
+                        HighscoreEntry tmp = highscores.highscoreEntryList[i];
+                        highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
+                        highscores.highscoreEntryList[j] = tmp;
+                    }
+                }
+            }
         }
     }
 
@@ -153,7 +170,6 @@ public class TriggerEvent : MonoBehaviour
     {
         // show enter name prompt
         GetLeaderboardNameUI.SetActive(true);
-
 
         // just a simple time delay as an example
         //yield return new WaitForSeconds(2.5f);
@@ -180,23 +196,24 @@ public class TriggerEvent : MonoBehaviour
                 if (done == true)
                 {
                     // if name isn't unique
-                    if (leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text) == 0)
-                    {
-                        done = false;
-                        StartCoroutine(errorMessage());
-                    }
-                    else
-                    {
-                        // set error message inactive
-                        errMsg.SetActive(false);
-                        winMenu.SetActive(true);
-                        HighScoreUI.SetActive(true);
-                        background.SetActive(false);
-                        HighScoreUI.SetActive(true);
-                        leaderboard.updateTable();
-                        leaderboardName.text = "";
-                    }
-                }
+                    leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
+                    leaderboard.updateTable();
+
+
+                    // reload and sort
+                    //string jsonString = PlayerPrefs.GetString("highscoreTable");
+                    //Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
+                    //SortList(highscores);
+
+
+                    leaderboardName.text = "";
+
+                    errMsg.SetActive(false);
+                    winMenu.SetActive(true);
+                    HighScoreUI.SetActive(true);
+                    background.SetActive(false);
+                 
+                 }
 
 
             }
@@ -215,7 +232,7 @@ public class TriggerEvent : MonoBehaviour
         // set error message active
         errMsg.SetActive(true);
 
-        yield return new WaitForSeconds(3.0f);
+        yield return new WaitForSeconds(1.0f);
 
     }
 

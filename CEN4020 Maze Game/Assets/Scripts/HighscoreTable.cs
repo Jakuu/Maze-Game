@@ -86,9 +86,9 @@ public class HighscoreTable : MonoBehaviour
         int k = 0;
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
         {
-            if (k == 10)
-                break;
-            k++;
+            //if (k == 10)
+              //  break;
+            //k++;
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
     }
@@ -156,7 +156,7 @@ public class HighscoreTable : MonoBehaviour
         transformList.Add(entryTransform);
     }
 
-    public int AddHighscoreEntry(int score, string name)
+    public void AddHighscoreEntry(int score, string name)
     {
         // Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
@@ -174,41 +174,14 @@ public class HighscoreTable : MonoBehaviour
             };
         }
 
-        // check that the name is unique from the top ten
-        int k = 0;
-        int match = 0;
-       
-        foreach (HighscoreEntry entry in highscores.highscoreEntryList)
-        {
-            if (k == 10)
-                break;
+        // Add new entry to Highscores
+        highscores.highscoreEntryList.Add(highscoreEntry);
 
-            if (entry.name == name)
-                match = 1; break;
+        // Save updated Highscores
+        string json = JsonUtility.ToJson(highscores);
+        PlayerPrefs.SetString("highscoreTable", json);
+        PlayerPrefs.Save();
 
-            Debug.Log("name: " + highscores.highscoreEntryList[k].name);
-            k++;
-        }
-
-        if (match == 0)
-        {
-            Debug.Log("name unique");
-            // Add new entry to Highscores
-            highscores.highscoreEntryList.Add(highscoreEntry);
-
-            // Save updated Highscores
-            string json = JsonUtility.ToJson(highscores);
-            PlayerPrefs.SetString("highscoreTable", json);
-            PlayerPrefs.Save();
-            return 1;
-        }
-        else 
-        { 
-            // display error message
-            Debug.Log("name not unique");
-            return 0;
-        
-        }
 
     }
 

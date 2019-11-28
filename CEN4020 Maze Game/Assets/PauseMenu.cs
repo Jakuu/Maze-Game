@@ -23,18 +23,43 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         background.SetActive(false);
+        deadMenu.SetActive(false);
+        background.SetActive(false);
+        winMenu.SetActive(false);
     }
     // Update is called once per frame
     void Update()
     {
+        if (IsPaused)
+            Debug.Log("is paused");
+        else
+            Debug.Log("is not paused");
+
+        if (pauseMenu.activeSelf == true)
+            Debug.Log("Active4");
+        else
+            Debug.Log("no longer active but whyyyy");
+
         // If the player Presses 'P' the game pauses
         if (Input.GetKeyDown(KeyCode.P))
         {
             if (!IsPaused)
             {
+                Debug.Log("is not paused");
                 Pause();
+
+                if (pauseMenu.activeSelf == true)
+                    Debug.Log("Active2");
+
+            }
+            else
+            {
+                Debug.Log("is paused");
             }
         }
+
+
+
         // While the game is paused
         if (IsPaused)
         {
@@ -77,6 +102,7 @@ public class PauseMenu : MonoBehaviour
                     }
                     else if (index == 1)
                     {
+                        Debug.Log("GETTING SET TO FALSE HERE");
                         optionsMenu.SetActive(true);
                         pauseMenu.SetActive(false);
                         maxIndex = 3;
@@ -147,10 +173,16 @@ public class PauseMenu : MonoBehaviour
                 }
             }
         }
+
+
+        if (pauseMenu.activeSelf == true)
+            Debug.Log("Active3");
     }
 
     public void Resume()
     {
+        Debug.Log("GETTING SET TO FALSE HERE");
+
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         IsPaused = false;
@@ -161,10 +193,16 @@ public class PauseMenu : MonoBehaviour
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         IsPaused = true;
+
+        if (pauseMenu.activeSelf == true)
+            Debug.Log("ACTIVE HERE");
+
     }
 
     public void QuitGame()
     {
+        Debug.Log("GETTING SET TO FALSE HERE");
+
         IsPaused = false;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
