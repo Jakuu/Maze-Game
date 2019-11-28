@@ -63,6 +63,20 @@ public class HighscoreTable : MonoBehaviour
         // Sort entry list by Score
         if (highscores.highscoreEntryList.Count > 1)
         {
+            SortList(highscores);
+        }
+
+        highscoreEntryTransformList = new List<Transform>();
+        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
+        {
+            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+        }
+    }
+
+    private void SortList(Highscores highscores)
+    {
+        if (highscores.highscoreEntryList.Count > 1)
+        {
             for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
             {
                 for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++)
@@ -76,16 +90,6 @@ public class HighscoreTable : MonoBehaviour
                     }
                 }
             }
-        }
-
-        highscoreEntryTransformList = new List<Transform>();
-        int k = 0;
-        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
-        {
-            //if (k == 10)
-            //  break;
-            //k++;
-            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
     }
 
@@ -173,6 +177,8 @@ public class HighscoreTable : MonoBehaviour
        
         if (highscores != null)
         {
+            SortList(highscores);
+
             // score entry of -1 used to initialize
             // delete if it exists in the list
             for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
@@ -184,7 +190,6 @@ public class HighscoreTable : MonoBehaviour
             // delete item if list is already length of 10
             if (highscores.highscoreEntryList.Count == 10)
                 highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
-
 
         }
 
