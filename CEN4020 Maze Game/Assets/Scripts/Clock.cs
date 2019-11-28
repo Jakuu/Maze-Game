@@ -14,11 +14,14 @@ public class Clock : MonoBehaviour
     // action performed when player collides with one of the clocks
     void OnTriggerEnter2D(Collider2D player)
     {
+        if (player.gameObject.tag == "Player")
+        {
             // apply effect to timer
-            timer.AddTime(5.0f); 
+            timer.AddTime(5.0f);
 
             // destroy clock object
             Destroy(gameObject);
+        }
     }
 }
 
