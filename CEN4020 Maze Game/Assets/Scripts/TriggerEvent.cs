@@ -16,7 +16,7 @@ public class TriggerEvent : MonoBehaviour
     public GameObject player;
     public GameObject highScoreTable;
     public GameObject errMsg;
-
+    public GameObject background;
 
     // get name from user
     [SerializeField] Text leaderboardName;
@@ -36,7 +36,6 @@ public class TriggerEvent : MonoBehaviour
     // set active/unactive
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject canvasPause;
-    [SerializeField] GameObject background;
 
     HighscoreTable leaderboard;
 
@@ -54,6 +53,8 @@ public class TriggerEvent : MonoBehaviour
         leaderboard = highScoreTable.GetComponent<HighscoreTable>();
 
         errMsg.SetActive(false);
+
+        background.SetActive(false);
 
     }
 
@@ -106,29 +107,38 @@ public class TriggerEvent : MonoBehaviour
             if (highscores.highscoreEntryList.Count >= 10 && stats.score > min)
             {
                 winMenu.SetActive(false);
-               // pauseMenu.SetActive(false);
-                canvasPause.SetActive(true);
+                pauseMenu.SetActive(false);
                 Time.timeScale = 0f;
                 PauseMenu.IsPaused = true;
                 HighScoreUI.SetActive(false);
-                background.SetActive(true);
+
+                // delete lowest entry
+                highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
+
                 // get player name for high score table
                 StartCoroutine(getName(stats, leaderboard));            
             }
             else if (highscores.highscoreEntryList.Count < 10)
             {
+                // if there are less than ten leaderboard scores, always add the new score  
                 winMenu.SetActive(false);
-                //pauseMenu.SetActive(false);
-                canvasPause.SetActive(true);
+                pauseMenu.SetActive(false);
                 Time.timeScale = 0f;
                 PauseMenu.IsPaused = true;
                 HighScoreUI.SetActive(false);
-                background.SetActive(true);
-                // if there are less than ten leaderboard scores, add new score  
                 StartCoroutine(getName(stats, leaderboard));
             }
             else
             {
+                Debug.Log("happening");
+                HighScoreUI.SetActive(true);
+                winMenu.SetActive(true);
+                Time.timeScale = 0f;
+                PauseMenu.IsPaused = true;
+
+                
+
+                
               /*  errMsg.SetActive(false);
                 HighScoreUI.SetActive(true);
                 background.SetActive(false);
@@ -169,6 +179,7 @@ public class TriggerEvent : MonoBehaviour
     private IEnumerator getName(PlayerStats stats, HighscoreTable leaderboard)
     {
         // show enter name prompt
+        background.SetActive(true);
         GetLeaderboardNameUI.SetActive(true);
 
         // just a simple time delay as an example
@@ -179,6 +190,8 @@ public class TriggerEvent : MonoBehaviour
 
         // remove prompt
         GetLeaderboardNameUI.SetActive(false);
+        background.SetActive(false);
+
     }
 
     private IEnumerator waitForKeyPress(KeyCode key, PlayerStats stats, HighscoreTable leaderboard)

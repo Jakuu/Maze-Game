@@ -25,7 +25,7 @@ public class HighscoreTable : MonoBehaviour
 
     private void Awake()
     {
-        //PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();
         updateTable();
     }
 
@@ -46,23 +46,20 @@ public class HighscoreTable : MonoBehaviour
 
         entryTemplate.gameObject.SetActive(false);
 
+
+
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-
 
         if (highscores == null)
         {
             // There's no stored table, initialize
-            highscores = new Highscores()
-            {
-                highscoreEntryList = new List<HighscoreEntry>()
-            };
-
+            Debug.Log("Initializing table with default value...");
+            AddHighscoreEntry(-1, "---");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
         }
-
 
         // Sort entry list by Score
         if (highscores.highscoreEntryList.Count > 1)
@@ -80,14 +77,14 @@ public class HighscoreTable : MonoBehaviour
                     }
                 }
             }
-         }
+        }
 
         highscoreEntryTransformList = new List<Transform>();
         int k = 0;
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
         {
             //if (k == 10)
-              //  break;
+            //  break;
             //k++;
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
@@ -165,14 +162,22 @@ public class HighscoreTable : MonoBehaviour
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
+        // There's no stored table, initialize
         if (highscores == null)
         {
-            // There's no stored table, initialize
             highscores = new Highscores()
             {
                 highscoreEntryList = new List<HighscoreEntry>()
             };
         }
+
+
+
+
+        
+
+
+
 
         // Add new entry to Highscores
         highscores.highscoreEntryList.Add(highscoreEntry);
