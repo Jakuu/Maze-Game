@@ -117,7 +117,6 @@ public class HighscoreTable : MonoBehaviour
     }
 
 
-
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList)
     {
         float templateHeight = 31f;

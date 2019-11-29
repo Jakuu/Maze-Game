@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &32945618
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -370,7 +370,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &109938681
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4812,7 +4812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &160168937
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -4944,7 +4944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &174234860
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5076,7 +5076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &213985186
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5309,7 +5309,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &252454883
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -5441,7 +5441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &252864342
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6010,7 +6010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &309848548
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -6373,7 +6373,7 @@ MonoBehaviour:
   highScoreTable: {fileID: 18944623}
   errMsg: {fileID: 1759728350}
   background: {fileID: 150466565}
-  tableName: level1_leaderboard
+  tableName: level1_highscoretable
   leaderboardName: {fileID: 1334175726}
   HighScoreUI: {fileID: 845122728}
   GetLeaderboardNameUI: {fileID: 581215023}
@@ -6635,7 +6635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &487452708
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7596,7 +7596,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &952193743
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -7728,7 +7728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &979315020
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8326,7 +8326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1128532765
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8458,7 +8458,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1154929616
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8590,7 +8590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1254337685
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8920,7 +8920,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1452263995
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9250,7 +9250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1566043570
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9514,7 +9514,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1614026050
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9725,7 +9725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1666820991
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -9857,7 +9857,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1693447046
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10197,7 +10197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1777947932
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -10466,7 +10466,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.17, y: -0.28}
+  m_AnchoredPosition: {x: -15.66, y: 1.59}
   m_SizeDelta: {x: 1, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1807650790
@@ -10869,7 +10869,7 @@ MonoBehaviour:
   highScoreTable: {fileID: 18944623}
   errMsg: {fileID: 0}
   background: {fileID: 150466565}
-  tableName: level1_leaderboard
+  tableName: level1_highscoretable
   leaderboardName: {fileID: 1334175726}
   HighScoreUI: {fileID: 845122728}
   GetLeaderboardNameUI: {fileID: 581215023}
@@ -11055,7 +11055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1903572745
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11266,7 +11266,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &1972146599
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11625,7 +11625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &2017138126
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11757,7 +11757,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &2102679124
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -11889,7 +11889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &2116579702
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12021,7 +12021,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &2118564207
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12153,7 +12153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36f2d94db356c4846803da0878680284, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  add: 5325
+  add: 325
 --- !u!58 &2124221635
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -12688,6 +12688,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 2010530597}
+    - target: {fileID: 4664901974003118596, guid: 0f73a746b87fe994982014751143feb7,
+        type: 3}
+      propertyPath: tableName
+      value: level1_highscoretable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f73a746b87fe994982014751143feb7, type: 3}
 --- !u!1001 &8300383031738649211

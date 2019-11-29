@@ -48,13 +48,9 @@ public class TriggerEvent : MonoBehaviour
     private void Start()
     {
         GetLeaderboardNameUI.SetActive(false);
-
         HighScoreUI.SetActive(false);
-
         leaderboard = highScoreTable.GetComponent<HighscoreTable>();
-
         errMsg.SetActive(false);
-
         background.SetActive(false);
 
     }
@@ -69,6 +65,8 @@ public class TriggerEvent : MonoBehaviour
         if (player.gameObject.tag == "Player")
         {
             int min = 0;
+
+
             // if the key has been collected / the objective has been completed
             //if (keyObj.isComplete())
             //{
@@ -105,23 +103,11 @@ public class TriggerEvent : MonoBehaviour
 
                 Debug.Log("min: " + min);
             }
-           /* else
-            {
-                highscores = new Highscores()
-                {
-                    highscoreEntryList = new List<HighscoreEntry>()
-                };
-                // There's no stored table, initialize
-               // Debug.Log("Initializing table with default value...");
-                leaderboard.AddHighscoreEntry(-1, "---");
-                // Reload
-                jsonString = PlayerPrefs.GetString(tableName);
-                highscores = JsonUtility.FromJson<Highscores>(jsonString);
-            }*/
+
 
             Debug.Log("score: " + stats.score + " and min: " + min);
             // if number of entries is >= 10 and new score is greater than min, put in top ten
-            if (stats.score > min)
+            if (highscores.highscoreEntryList.Count < 10)
             {
                 Debug.Log("thisone 1");
                 winMenu.SetActive(false);
@@ -130,27 +116,22 @@ public class TriggerEvent : MonoBehaviour
                 PauseMenu.IsPaused = true;
                 HighScoreUI.SetActive(false);
 
-                // delete lowest entry
-                Debug.Log("number of entries: " + highscores.highscoreEntryList.Count);
-                if (highscores.highscoreEntryList.Count >= 10)
-                    highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1]);
-
                 // get player name for high score table
                 StartCoroutine(getName(stats, leaderboard));
 
-            }/*
-            else if (highscores.highscoreEntryList.Count < 10)
+            }
+            else if (stats.score > min)
             {
-                Debug.Log("thisone 2");
-                // if there are less than ten leaderboard scores, always add the new score  
+                Debug.Log("thisone 1");
                 winMenu.SetActive(false);
                 pauseMenu.SetActive(false);
                 Time.timeScale = 0f;
                 PauseMenu.IsPaused = true;
                 HighScoreUI.SetActive(false);
-                StartCoroutine(getName(stats, leaderboard));
 
-            }*/
+                // get player name for high score table
+                StartCoroutine(getName(stats, leaderboard));
+            }
             else
             {
                 Debug.Log("happening");
@@ -159,15 +140,6 @@ public class TriggerEvent : MonoBehaviour
                 Time.timeScale = 0f;
                 PauseMenu.IsPaused = true;
 
-                
-              /*  errMsg.SetActive(false);
-                HighScoreUI.SetActive(true);
-                background.SetActive(false);
-                pauseMenu.SetActive(false);
-                winMenu.SetActive(true);
-                canvasPause.SetActive(true);
-                Time.timeScale = 0f;
-                PauseMenu.IsPaused = true;*/
             }
 
             // don't prompt the user if the number of entries is >= 10 and score is less than min
@@ -202,9 +174,6 @@ public class TriggerEvent : MonoBehaviour
         // show enter name prompt
         background.SetActive(true);
         GetLeaderboardNameUI.SetActive(true);
-
-        // just a simple time delay as an example
-        //yield return new WaitForSeconds(2.5f);
 
         // wait for player to press space
         yield return waitForKeyPress(KeyCode.Return, stats, leaderboard); // wait for this function to return
@@ -243,8 +212,6 @@ public class TriggerEvent : MonoBehaviour
             }
             yield return null; // wait until next frame, then continue execution from here (loop continues)
         }
-
-        // now this function returns
     }
 
 
