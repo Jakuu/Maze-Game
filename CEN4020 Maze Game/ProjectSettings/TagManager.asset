@@ -8,6 +8,8 @@ TagManager:
   - Wall
   - Spy-Enemy
   - Tri-Enemy
+  - highscoreEntryContainer
+  - highscoreEntryTemplate
   layers:
   - Default
   - TransparentFX

@@ -92,10 +92,15 @@ public class TriggerEvent : MonoBehaviour
                 SortList(highscores);
 
                 // get min of top ten scores
-                if (highscores.highscoreEntryList.Count >= 10)
+                if (highscores.highscoreEntryList.Count == 10)
                 {
-                    Debug.Log("greater than 10");
+                    Debug.Log("equal to 10");
                     min = highscores.highscoreEntryList[9].score;
+                }
+                else
+                {
+                    int tmp = highscores.highscoreEntryList.Count - 1;
+                    min = highscores.highscoreEntryList[tmp].score;                
                 }
 
                 Debug.Log("min: " + min);
@@ -114,10 +119,11 @@ public class TriggerEvent : MonoBehaviour
                 highscores = JsonUtility.FromJson<Highscores>(jsonString);
             }*/
 
-           
+            Debug.Log("score: " + stats.score + " and min: " + min);
             // if number of entries is >= 10 and new score is greater than min, put in top ten
-            if (highscores.highscoreEntryList.Count >= 10 && stats.score > min)
+            if (highscores.highscoreEntryList.Count == 10 && stats.score > min)
             {
+                Debug.Log("thisone 1");
                 winMenu.SetActive(false);
                 pauseMenu.SetActive(false);
                 Time.timeScale = 0f;
@@ -133,6 +139,7 @@ public class TriggerEvent : MonoBehaviour
             }
             else if (highscores.highscoreEntryList.Count < 10)
             {
+                Debug.Log("thisone 2");
                 // if there are less than ten leaderboard scores, always add the new score  
                 winMenu.SetActive(false);
                 pauseMenu.SetActive(false);

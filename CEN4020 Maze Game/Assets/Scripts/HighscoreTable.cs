@@ -77,7 +77,7 @@ public class HighscoreTable : MonoBehaviour
             }
 
             int l = highscores.highscoreEntryList.Count - 1;
-            while (highscores.highscoreEntryList.Count >= 10)
+            while (highscores.highscoreEntryList.Count > 10)
             {
                 Debug.Log("removing score");
                 highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[l--]);
@@ -219,6 +219,7 @@ public class HighscoreTable : MonoBehaviour
 
         // Add new entry to Highscores
         highscores.highscoreEntryList.Add(highscoreEntry);
+
         // Sort entry list by Score
         if (highscores.highscoreEntryList.Count > 1)
         {
@@ -230,11 +231,28 @@ public class HighscoreTable : MonoBehaviour
         PlayerPrefs.SetString(tableName, json);
         PlayerPrefs.Save();
 
-        if (highscoreEntryTransformList == null)
-            highscoreEntryTransformList = new List<Transform>();
+        // destroy existing gameobject entries
+        foreach (Transform child in entryContainer)
+        {
+            if (child.CompareTag("highscoreEntryTemplate"))
+            {
+                Debug.Log("killing child");
+                if (child.gameObject.activeSelf == true)
+                    Destroy(child.gameObject);
+            }
+            else
+            {
+                Debug.Log("not found");
+            }
+        }
 
-        CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+        // clear the list
+        highscoreEntryTransformList.Clear();
 
+        foreach (HighscoreEntry entry in highscores.highscoreEntryList)
+        {
+            CreateHighscoreEntryTransform(entry, entryContainer, highscoreEntryTransformList);
+        }
     }
 
 

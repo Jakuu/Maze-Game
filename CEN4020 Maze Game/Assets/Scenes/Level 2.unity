@@ -13215,6 +13215,16 @@ PrefabInstance:
       propertyPath: tableName
       value: leaderboard_level2
       objectReference: {fileID: 0}
+    - target: {fileID: 7987535543806073002, guid: 1baf8ce652311cb4da81b9d171347aef,
+        type: 3}
+      propertyPath: m_TagString
+      value: highscoreEntryContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 7987535542955410159, guid: 1baf8ce652311cb4da81b9d171347aef,
+        type: 3}
+      propertyPath: m_TagString
+      value: highscoreEntryTemplate
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1baf8ce652311cb4da81b9d171347aef, type: 3}
 --- !u!1001 &8300383031738649211
