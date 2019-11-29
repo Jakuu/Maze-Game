@@ -19,8 +19,8 @@ using CodeMonkey.Utils;
 public class HighscoreTable : MonoBehaviour
 {
 
-    private Transform entryContainer;
-    private Transform entryTemplate;
+    public Transform entryContainer;
+    public Transform entryTemplate;
     public string tableName;
     public List<Transform> highscoreEntryTransformList;
 
@@ -67,20 +67,29 @@ public class HighscoreTable : MonoBehaviour
          }
 
 
-
-
-        // Sort entry list by Score
-        if (highscores.highscoreEntryList.Count > 1)
+        // only keep the top ten
+        if (highscores != null)
         {
-            SortList(highscores);
-        }
+            // Sort entry list by Score
+            if (highscores.highscoreEntryList.Count > 1)
+            {
+                SortList(highscores);
+            }
 
-        highscoreEntryTransformList = new List<Transform>();
-        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
-        {
-            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
-        }
+            int l = highscores.highscoreEntryList.Count - 1;
+            while (highscores.highscoreEntryList.Count >= 10)
+            {
+                Debug.Log("removing score");
+                highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[l--]);
+            }
 
+            highscoreEntryTransformList = new List<Transform>();
+            foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
+            {
+                CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+            }
+        }
+        
         
     }
 
@@ -182,15 +191,19 @@ public class HighscoreTable : MonoBehaviour
 
             // score entry of -1 used to initialize
             // delete if it exists in the list
-            /*foreach (HighscoreEntry entry in highscores.highscoreEntryList)
-                if (entry.score == -1)
-                    highscores.highscoreEntryList.Remove(entry);*/
-            if (highscores.highscoreEntryList[0].score == -1)
-              highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[0]);
+            for (int i = 0; i < highscores.highscoreEntryList.Count; i++)
+            {
+                if (highscores.highscoreEntryList[i].score == -1)
+                    highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[i]);
+            }
 
-            // delete item if list is already length of 10
-            if (highscores.highscoreEntryList.Count == 10)
-                highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
+            // delete items if list is >= 10 --> only want the top ten scores (0 - 9)
+            int l = highscores.highscoreEntryList.Count - 1;
+            while (highscores.highscoreEntryList.Count > 10)
+            {
+                Debug.Log("removing score");
+                highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[l--]);
+            }
 
         }
 
@@ -202,17 +215,25 @@ public class HighscoreTable : MonoBehaviour
                 highscoreEntryList = new List<HighscoreEntry>()
             };
         }
-
      
 
         // Add new entry to Highscores
         highscores.highscoreEntryList.Add(highscoreEntry);
+        // Sort entry list by Score
+        if (highscores.highscoreEntryList.Count > 1)
+        {
+            SortList(highscores);
+        }
 
         // Save updated Highscores
         string json = JsonUtility.ToJson(highscores);
         PlayerPrefs.SetString(tableName, json);
         PlayerPrefs.Save();
 
+        if (highscoreEntryTransformList == null)
+            highscoreEntryTransformList = new List<Transform>();
+
+        CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
 
     }
 

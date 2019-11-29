@@ -219,23 +219,10 @@ public class TriggerEvent : MonoBehaviour
                 // add user to leaderboard
                 if (done == true)
                 {
+                    Time.timeScale = 1f;
                     leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
-                    leaderboard.updateTable();
-
-
-            /*// try                    foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList)
-                    {
-                        CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
-                    }
-               */
-                    // reload and sort
-                    //string jsonString = PlayerPrefs.GetString("highscoreTable");
-                    //Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
-                    //SortList(highscores);
-
-
                     leaderboardName.text = "";
-
+                    Time.timeScale = 0f;
                     errMsg.SetActive(false);
                     winMenu.SetActive(true);
                     HighScoreUI.SetActive(true);

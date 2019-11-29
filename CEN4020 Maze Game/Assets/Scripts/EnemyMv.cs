@@ -42,11 +42,8 @@ public class EnemyMv : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Collision");
         if (col.gameObject.tag == "Wall")
         {
-            Debug.Log("Collision with wall");
-
             latestDirectionChangeTime = 0f;
             calcuateNewMovementVector();
 

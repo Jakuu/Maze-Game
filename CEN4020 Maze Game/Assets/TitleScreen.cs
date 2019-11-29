@@ -84,6 +84,10 @@ public class TitleScreen : MonoBehaviour
                 }
                 else if (menuController.index == 2)
                 {
+                    SceneManager.LoadScene(3);
+                }
+                else if (menuController.index == 3)
+                {
                     menuController.index = 0;
                     gameObject1.SetActive(true);
                     gameObject2.SetActive(false);
