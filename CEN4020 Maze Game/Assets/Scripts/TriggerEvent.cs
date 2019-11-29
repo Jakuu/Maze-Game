@@ -121,7 +121,7 @@ public class TriggerEvent : MonoBehaviour
 
             Debug.Log("score: " + stats.score + " and min: " + min);
             // if number of entries is >= 10 and new score is greater than min, put in top ten
-            if (highscores.highscoreEntryList.Count == 10 && stats.score > min)
+            if (stats.score > min)
             {
                 Debug.Log("thisone 1");
                 winMenu.SetActive(false);
@@ -131,12 +131,14 @@ public class TriggerEvent : MonoBehaviour
                 HighScoreUI.SetActive(false);
 
                 // delete lowest entry
-               // highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[9]);
+                Debug.Log("number of entries: " + highscores.highscoreEntryList.Count);
+                if (highscores.highscoreEntryList.Count >= 10)
+                    highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[highscores.highscoreEntryList.Count - 1]);
 
                 // get player name for high score table
                 StartCoroutine(getName(stats, leaderboard));
 
-            }
+            }/*
             else if (highscores.highscoreEntryList.Count < 10)
             {
                 Debug.Log("thisone 2");
@@ -148,7 +150,7 @@ public class TriggerEvent : MonoBehaviour
                 HighScoreUI.SetActive(false);
                 StartCoroutine(getName(stats, leaderboard));
 
-            }
+            }*/
             else
             {
                 Debug.Log("happening");

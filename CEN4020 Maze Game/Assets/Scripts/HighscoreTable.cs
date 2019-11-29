@@ -77,6 +77,9 @@ public class HighscoreTable : MonoBehaviour
             }
 
             int l = highscores.highscoreEntryList.Count - 1;
+
+            // only > 10 here... not about to add another entry
+            // compare to the add high score function, which needs >= 10
             while (highscores.highscoreEntryList.Count > 10)
             {
                 Debug.Log("removing score");
@@ -198,8 +201,9 @@ public class HighscoreTable : MonoBehaviour
             }
 
             // delete items if list is >= 10 --> only want the top ten scores (0 - 9)
+            // need >= here because about to add another entry
             int l = highscores.highscoreEntryList.Count - 1;
-            while (highscores.highscoreEntryList.Count > 10)
+            while (highscores.highscoreEntryList.Count >= 10)
             {
                 Debug.Log("removing score");
                 highscores.highscoreEntryList.Remove(highscores.highscoreEntryList[l--]);
