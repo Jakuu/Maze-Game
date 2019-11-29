@@ -89,6 +89,7 @@
      <Compile Include="Assets\PauseMenuButton.cs" />
      <Compile Include="Assets\Scripts\ButtonTrigger.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
+     <Compile Include="Assets\Scripts\Clock_Weighted.cs" />
      <Compile Include="Assets\Scripts\CountdownTimer.cs" />
      <Compile Include="Assets\Scripts\EnemyMv.cs" />
      <Compile Include="Assets\Scripts\HighscoreTable.cs" />
@@ -98,8 +99,8 @@
      <Compile Include="Assets\Scripts\ObjectiveTracker.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
-     <Compile Include="Assets\Scripts\PowerUp.cs" />
      <Compile Include="Assets\Scripts\PowerUp_.cs" />
+     <Compile Include="Assets\Scripts\PowerUp_Weighted.cs" />
      <Compile Include="Assets\Scripts\Saw1Movement.cs" />
      <Compile Include="Assets\Scripts\Saw2Movement.cs" />
      <Compile Include="Assets\Scripts\ScoreCount.cs" />
