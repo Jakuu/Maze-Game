@@ -239,7 +239,6 @@ public class HighscoreTable : MonoBehaviour
         {
             if (child.CompareTag("highscoreEntryTemplate"))
             {
-                Debug.Log("killing child");
                 if (child.gameObject.activeSelf == true)
                     Destroy(child.gameObject);
             }

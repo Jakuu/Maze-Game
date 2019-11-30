@@ -6407,7 +6407,7 @@ MonoBehaviour:
   highScoreTable: {fileID: 18944623}
   errMsg: {fileID: 1759728350}
   background: {fileID: 150466565}
-  tableName: level1_highscoretable
+  tableName: _level1_highscoretable
   leaderboardName: {fileID: 1334175726}
   HighScoreUI: {fileID: 845122728}
   GetLeaderboardNameUI: {fileID: 581215023}
@@ -10937,7 +10937,7 @@ MonoBehaviour:
   highScoreTable: {fileID: 18944623}
   errMsg: {fileID: 0}
   background: {fileID: 150466565}
-  tableName: level1_highscoretable
+  tableName: _level1_highscoretable
   leaderboardName: {fileID: 1334175726}
   HighScoreUI: {fileID: 845122728}
   GetLeaderboardNameUI: {fileID: 581215023}
@@ -12759,7 +12759,7 @@ PrefabInstance:
     - target: {fileID: 4664901974003118596, guid: 0f73a746b87fe994982014751143feb7,
         type: 3}
       propertyPath: tableName
-      value: level1_highscoretable
+      value: _level1_highscoretable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f73a746b87fe994982014751143feb7, type: 3}
