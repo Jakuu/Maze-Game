@@ -91,7 +91,8 @@
      <Compile Include="Assets\Scripts\Clock.cs" />
      <Compile Include="Assets\Scripts\Clock_Weighted.cs" />
      <Compile Include="Assets\Scripts\CountdownTimer.cs" />
-     <Compile Include="Assets\Scripts\EnemyMv.cs" />
+     <Compile Include="Assets\Scripts\EnemyMvHorizontal.cs" />
+     <Compile Include="Assets\Scripts\EnemyMvVertical.cs" />
      <Compile Include="Assets\Scripts\HighscoreTable.cs" />
      <Compile Include="Assets\Scripts\IObjective.cs" />
      <Compile Include="Assets\Scripts\ItemObjective.cs" />
