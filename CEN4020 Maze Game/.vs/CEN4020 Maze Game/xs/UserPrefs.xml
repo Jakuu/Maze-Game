@@ -1,17 +1,20 @@
 ﻿<Properties StartupConfiguration="{1EFE9581-549E-BF7F-B8CF-E1AC8CF4E737}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/PauseMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ObjectiveTracker.cs">
     <Files>
       <File FileName="Assets/Scripts/CountdownTimer.cs" Line="21" Column="45" />
-      <File FileName="Assets/Scripts/TriggerEvent.cs" Line="50" Column="33" />
+      <File FileName="Assets/Scripts/TriggerEvent.cs" />
       <File FileName="Assets/PauseMenu.cs" Line="113" Column="22" />
+      <File FileName="Assets/Scripts/ButtonTrigger.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ObjectiveTracker.cs" Line="27" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="CEN4020 Maze Game" expanded="True">
             <Node name="Assets" expanded="True">
-              <Node name="Scripts" expanded="True" />
-              <Node name="PauseMenu.cs" selected="True" />
+              <Node name="Scripts" expanded="True">
+                <Node name="ObjectiveTracker.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
@@ -20,7 +23,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="07462ab6-0361-425e-a8cb-95f1ad3f5432" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="e327ea7f-f636-421e-a158-d0d98abf439c" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
