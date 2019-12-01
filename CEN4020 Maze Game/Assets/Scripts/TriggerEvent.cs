@@ -18,6 +18,9 @@ public class TriggerEvent : MonoBehaviour
     public GameObject errMsg;
     public GameObject background;
     public string tableName;
+    public GetQuests objectiveTracker;
+    public MultiObjectives multiobj;
+    public SequenceObjectives seqobj;
 
     // get name from user
     [SerializeField] Text leaderboardName;
@@ -52,7 +55,6 @@ public class TriggerEvent : MonoBehaviour
         leaderboard = highScoreTable.GetComponent<HighscoreTable>();
         errMsg.SetActive(false);
         background.SetActive(false);
-
     }
 
     // this function takes a player object as a parameter
@@ -62,7 +64,7 @@ public class TriggerEvent : MonoBehaviour
     {
 
         // if the player is equal to our Player object
-        if (player.gameObject.tag == "Player")
+        if (player.gameObject.tag == "Player" && multiobj.isComplete())
         {
             int min = 0;
 
