@@ -6245,7 +6245,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807650782}
   highScoreTable: {fileID: 18944623}
-  errMsg: {fileID: 0}
   background: {fileID: 150466565}
   tableName: _level1_highscoretable
   objectiveTracker: {fileID: 480032560}
@@ -6725,36 +6724,6 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6301629570539281207, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -500
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629569780370731, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1040
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629570269506743, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -650
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629569066067355, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -900
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629570572377972, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -944
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629570572377972, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6301629569615744662, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
         type: 3}
       propertyPath: m_Enabled
@@ -6784,6 +6753,36 @@ PrefabInstance:
         type: 3}
       propertyPath: maxIndex
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570539281207, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569780370731, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1040
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570269506743, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -650
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569066067355, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -900
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570572377972, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -944
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629570572377972, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9091faead9f4a9ebb536fbe103d9cf, type: 3}
@@ -6977,6 +6976,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 4664901974017728629}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &881434778
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 881434779}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Respawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &881434779
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881434778}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -15.66, y: 1.59, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &906816017
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7032,7 +7061,7 @@ PrefabInstance:
     - target: {fileID: 8765231690707474979, guid: 30edaa2d33d3f49d59aee3312c6d10e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8765231690707474979, guid: 30edaa2d33d3f49d59aee3312c6d10e8,
         type: 3}
@@ -9182,7 +9211,7 @@ GameObject:
   - component: {fileID: 1807650783}
   - component: {fileID: 1807650790}
   - component: {fileID: 1807650791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9258,8 +9287,11 @@ MonoBehaviour:
   deadMenu: {fileID: 1056690679}
   pauseMenu: {fileID: 115541275}
   canvasPause: {fileID: 1428993548}
+  hit: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
+  spawn: {fileID: 881434778}
   moveSpeed: 5
-  health: 3
+  health: 300
+  lives: 3
   rb: {fileID: 1807650787}
 --- !u!50 &1807650787
 Rigidbody2D:
@@ -9670,7 +9702,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807650782}
   highScoreTable: {fileID: 18944623}
-  errMsg: {fileID: 0}
   background: {fileID: 150466565}
   tableName: _level1_highscoretable
   objectiveTracker: {fileID: 480032560}

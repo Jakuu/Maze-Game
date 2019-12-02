@@ -5321,7 +5321,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807650782}
   highScoreTable: {fileID: 18944623}
-  errMsg: {fileID: 0}
   background: {fileID: 150466565}
   tableName: _level2_highscoretable
   objectiveTracker: {fileID: 0}
@@ -5780,7 +5779,7 @@ PrefabInstance:
     - target: {fileID: 8765231690707474979, guid: 30edaa2d33d3f49d59aee3312c6d10e8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8765231690707474979, guid: 30edaa2d33d3f49d59aee3312c6d10e8,
         type: 3}
@@ -6677,6 +6676,21 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6301629569615744662, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301629569615744662, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: maxIndex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6121740600477021897, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
+        type: 3}
+      propertyPath: maxIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6301629570539281207, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -6706,21 +6720,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629569615744662, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6301629569615744662, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: maxIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6121740600477021897, guid: 5a9091faead9f4a9ebb536fbe103d9cf,
-        type: 3}
-      propertyPath: maxIndex
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a9091faead9f4a9ebb536fbe103d9cf, type: 3}
@@ -6993,6 +6992,36 @@ Transform:
   - {fileID: 1968525968}
   m_Father: {fileID: 659617360}
   m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &811583927
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 811583928}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Respawn
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &811583928
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811583927}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.22, y: -6.72, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &845122728 stripped
 GameObject:
@@ -9484,7 +9513,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807650782}
   highScoreTable: {fileID: 18944623}
-  errMsg: {fileID: 0}
   background: {fileID: 150466565}
   tableName: _level2_highscoretable
   objectiveTracker: {fileID: 0}
@@ -9741,7 +9769,7 @@ GameObject:
   - component: {fileID: 1807650783}
   - component: {fileID: 1807650790}
   - component: {fileID: 1807650791}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -9817,8 +9845,11 @@ MonoBehaviour:
   deadMenu: {fileID: 1056690679}
   pauseMenu: {fileID: 115541275}
   canvasPause: {fileID: 1428993548}
+  hit: {fileID: 1000013462590818, guid: ecdd96beb7f93494880c052dfccf9dc1, type: 3}
+  spawn: {fileID: 811583927}
   moveSpeed: 5
-  health: 3
+  health: 300
+  lives: 3
   rb: {fileID: 1807650787}
 --- !u!50 &1807650787
 Rigidbody2D:
