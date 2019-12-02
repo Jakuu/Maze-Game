@@ -40,11 +40,11 @@ public class EnemyMvHorizontal : MonoBehaviour
         }
     }
 
-   void Update()
+    void Update()
     {
         //if the changeTime was reached, calculate a new movement vector
         
-       /* if (Time.time - latestDirectionChangeTime > directionChangeTime)
+        /* if (Time.time - latestDirectionChangeTime > directionChangeTime)
         {
             latestDirectionChangeTime = Time.time;
             calcuateNewMovementVector();

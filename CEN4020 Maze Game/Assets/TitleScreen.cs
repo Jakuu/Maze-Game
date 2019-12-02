@@ -49,22 +49,10 @@ public class TitleScreen : MonoBehaviour
                 }
 
             }
-            //While on OptionsMenu
+            //While on ControlsMenu
             else if (gameObject3.activeSelf == true)
             {
                 if (menuController.index == 0)
-                {
-
-                }
-                else if (menuController.index == 1)
-                {
-
-                }
-                else if (menuController.index == 2)
-                {
-
-                }
-                else if (menuController.index == 3)
                 {
                     menuController.index = 0;
                     gameObject1.SetActive(true);
@@ -86,11 +74,19 @@ public class TitleScreen : MonoBehaviour
                 {
                     SceneManager.LoadScene(3);
                 }
-                else if (menuController.index == 3)
+                else if (menuController.index == 5)
                 {
                     menuController.index = 0;
                     gameObject1.SetActive(true);
                     gameObject2.SetActive(false);
+                }
+                else if (menuController.index == 3)
+                {
+                    SceneManager.LoadScene(4);
+                }
+                else if (menuController.index == 4)
+                {
+                    SceneManager.LoadScene(5);
                 }
             }
         }

@@ -10,6 +10,7 @@ TagManager:
   - Tri-Enemy
   - highscoreEntryContainer
   - highscoreEntryTemplate
+  - music
   layers:
   - Default
   - TransparentFX

@@ -1,24 +1,7 @@
 ﻿<Properties StartupConfiguration="{1EFE9581-549E-BF7F-B8CF-E1AC8CF4E737}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Level3Goal.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayMusic.cs">
     <Files>
-      <File FileName="Assets/Scripts/CountdownTimer.cs" Line="21" Column="45" />
-      <File FileName="Assets/Scripts/TriggerEvent.cs" Line="80" Column="1" />
-      <File FileName="Assets/PauseMenu.cs" Line="113" Column="22" />
-      <File FileName="Assets/Scripts/ButtonTrigger.cs" Line="15" Column="49" />
-      <File FileName="Assets/Scripts/ItemObjective.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ObjectiveTracker.cs" Line="17" Column="19" />
-      <File FileName="Assets/Scripts/GetQuests.cs" Line="9" Column="1" />
-      <File FileName="Assets/Scripts/MultiObjectives.cs" Line="10" Column="28" />
-      <File FileName="Assets/Scripts/Sequence Lever 1.cs" Line="36" Column="1" />
-      <File FileName="Assets/Scripts/SequenceLever2.cs" Line="14" Column="6" />
-      <File FileName="Assets/Scripts/SequenceTracker.cs" Line="6" Column="2" />
-      <File FileName="Assets/Scripts/SequenceTracker2.cs" Line="9" Column="14" />
-      <File FileName="Assets/Scripts/SequenceTracker3.cs" Line="12" Column="17" />
-      <File FileName="Assets/Scripts/SequenceLever3.cs" Line="10" Column="27" />
-      <File FileName="Assets/Scripts/SequenceObjectives.cs" Line="4" Column="22" />
-      <File FileName="Assets/Scripts/ObjCollection.cs" Line="4" Column="23" />
-      <File FileName="Assets/Scripts/IObjective.cs" Line="12" Column="23" />
-      <File FileName="Assets/Scripts/Level3Goal.cs" Line="67" Column="50" />
+      <File FileName="Assets/Scripts/PlayMusic.cs" Line="27" Column="44" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -26,7 +9,7 @@
           <Node name="CEN4020 Maze Game" expanded="True">
             <Node name="Assets" expanded="True">
               <Node name="Scripts" expanded="True">
-                <Node name="TriggerEvent.cs" selected="True" />
+                <Node name="PlayMusic.cs" selected="True" />
               </Node>
             </Node>
           </Node>
@@ -36,7 +19,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="250c7652-7af4-4eba-af5b-7be6dd1facf0" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="509491fd-0534-4c38-bf3a-082a06a2c51d" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
