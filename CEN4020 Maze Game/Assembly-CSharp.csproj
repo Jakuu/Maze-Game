@@ -116,6 +116,7 @@
     <Compile Include="Assets\Scripts\TriEnemyMovement.cs" />
     <Compile Include="Assets\Scripts\TriggerEvent.cs" />
     <Compile Include="Assets\TitleScreen.cs" />
+    <Compile Include="Assets\Turret.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />

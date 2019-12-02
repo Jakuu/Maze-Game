@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject canvasPause;
 
-    public GameObject hit;
+    public GameObject hit, spawn;
     private GameObject instObject;
     public float moveSpeed = 5f;
     public int health = 300;
@@ -74,16 +74,18 @@ public class PlayerMovement : MonoBehaviour
                                      //this.transform.position = spawn.transform.position; //respawn
                                      //gameObject.SetActive(false);
                                      //Time.timeScale = 0f;  
-            StartCoroutine(wait());
-            pause = true;
+            this.transform.position = spawn.transform.position;
+
+            //StartCoroutine(wait());       
+            //pause = true;
         }
 
         IEnumerator invin()
         {
-            Physics2D.IgnoreLayerCollision(8, 9, true); //ignore collision with enemies
+            Physics2D.IgnoreLayerCollision(9, 10, true); //ignore collision with enemies
             yield return new WaitForSeconds(2f); // wait time
             GetComponent<SpriteRenderer>().color = Color.white;
-            Physics2D.IgnoreLayerCollision(8, 9, false);
+            Physics2D.IgnoreLayerCollision(9, 10, false);
         }
     }
 

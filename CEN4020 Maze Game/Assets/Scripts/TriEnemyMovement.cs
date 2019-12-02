@@ -24,16 +24,16 @@ public class TriEnemyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Shoot();
-        transform.LookAt(Player);
-        
+     
+        Vector3 difference = Player.position - transform.position;
+        float rotationZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.Euler(0.0f, 0.0f, rotationZ);
+
 
         if (Vector3.Distance(transform.position, Player.position) >= MinDist)
         {
 
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
-
-
 
             if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
             {
@@ -43,15 +43,5 @@ public class TriEnemyMovement : MonoBehaviour
         }
         
         
-    }
-
-    void Shoot()
-    {
-        if (Time.deltaTime > nextShot)
-        {
-            Instantiate(bullet, transform.position, Quaternion.identity);
-        
-            nextShot = Time.deltaTime + fireRate;
-        }
     }
 }
