@@ -104,10 +104,16 @@ public class PauseMenu : MonoBehaviour
                         //Next Level
                         Time.timeScale = 1f;
                         IsPaused = false;
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+                        if ((SceneManager.GetActiveScene().buildIndex) == 5)
+                            SceneManager.LoadScene(1);
+                        else
+                            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
                     }
                     else if (index == 1)
                     {
+                        Debug.Log("this right here");
                         //go to main menu
                         QuitGame();
                     }

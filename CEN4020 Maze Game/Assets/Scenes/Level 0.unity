@@ -170,7 +170,7 @@ MonoBehaviour:
   highScoreTable: {fileID: 172456353}
   errMsg: {fileID: 823343691}
   background: {fileID: 1526547829}
-  tableName: _level1_highscoretable
+  tableName: _level0_highscoretable
   objectiveTracker: {fileID: 1542124650}
   multiobj: {fileID: 1542124652}
   seqobj: {fileID: 0}
@@ -362,7 +362,7 @@ MonoBehaviour:
   highScoreTable: {fileID: 172456353}
   errMsg: {fileID: 823343691}
   background: {fileID: 1526547829}
-  tableName: _level1_highscoretable
+  tableName: _level0_highscoretable
   objectiveTracker: {fileID: 1542124650}
   multiobj: {fileID: 1542124652}
   seqobj: {fileID: 0}
@@ -817,7 +817,7 @@ PrefabInstance:
     - target: {fileID: 4664901974003118596, guid: 0f73a746b87fe994982014751143feb7,
         type: 3}
       propertyPath: tableName
-      value: _level1_highscoretable
+      value: _level0_highscoretable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f73a746b87fe994982014751143feb7, type: 3}
