@@ -12,7 +12,7 @@ public class ButtonTrigger : MonoBehaviour
     {
         _sprite = this.gameObject.GetComponent<SpriteRenderer>();
 
-        _objective = new ItemObjective("Push Button");
+        _objective = new ItemObjective("Activate Lever");
     }
 
     public bool isComplete()
@@ -32,7 +32,7 @@ public class ButtonTrigger : MonoBehaviour
 
     public string getObjective()
     {
-        return "Push Button";
-        //return _objective.getRequirements();
+        //return "Push Button";
+        return _objective.getRequirements();
     }
 }

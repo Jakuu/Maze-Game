@@ -95,28 +95,42 @@
     <Compile Include="Assets\MenuController.cs" />
     <Compile Include="Assets\PauseMenu.cs" />
     <Compile Include="Assets\PauseMenuButton.cs" />
+    <Compile Include="Assets\Scripts\BonusLvl_TriggerEvent.cs" />
     <Compile Include="Assets\Scripts\ButtonTrigger.cs" />
+    <Compile Include="Assets\Scripts\ChaseTarget.cs" />
     <Compile Include="Assets\Scripts\Clock.cs" />
     <Compile Include="Assets\Scripts\Clock_Weighted.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
-    <Compile Include="Assets\Scripts\EnemyMv.cs" />
+    <Compile Include="Assets\Scripts\EnemyMvHorizontal.cs" />
+    <Compile Include="Assets\Scripts\EnemyMvVertical.cs" />
+    <Compile Include="Assets\Scripts\GetQuests.cs" />
     <Compile Include="Assets\Scripts\HighscoreTable.cs" />
     <Compile Include="Assets\Scripts\IObjective.cs" />
     <Compile Include="Assets\Scripts\ItemObjective.cs" />
     <Compile Include="Assets\Scripts\KeyTrigger.cs" />
+    <Compile Include="Assets\Scripts\Level3Goal.cs" />
+    <Compile Include="Assets\Scripts\MultiObjectives.cs" />
+    <Compile Include="Assets\Scripts\ObjCollection.cs" />
     <Compile Include="Assets\Scripts\ObjectiveTracker.cs" />
     <Compile Include="Assets\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\PlayerStats.cs" />
+    <Compile Include="Assets\Scripts\PlayMusic.cs" />
     <Compile Include="Assets\Scripts\PowerUp_.cs" />
     <Compile Include="Assets\Scripts\PowerUp_Weighted.cs" />
     <Compile Include="Assets\Scripts\Projectile.cs" />
     <Compile Include="Assets\Scripts\Saw1Movement.cs" />
     <Compile Include="Assets\Scripts\Saw2Movement.cs" />
     <Compile Include="Assets\Scripts\ScoreCount.cs" />
-    <Compile Include="Assets\Scripts\TriEnemyMovement.cs" />
+    <Compile Include="Assets\Scripts\SequenceLever1.cs" />
+    <Compile Include="Assets\Scripts\SequenceLever2.cs" />
+    <Compile Include="Assets\Scripts\SequenceLever3.cs" />
+    <Compile Include="Assets\Scripts\SequenceObjectives.cs" />
+    <Compile Include="Assets\Scripts\SequenceTracker.cs" />
+    <Compile Include="Assets\Scripts\SequenceTracker2.cs" />
+    <Compile Include="Assets\Scripts\SequenceTracker3.cs" />
     <Compile Include="Assets\Scripts\TriggerEvent.cs" />
+    <Compile Include="Assets\Scripts\Turret.cs" />
     <Compile Include="Assets\TitleScreen.cs" />
-    <Compile Include="Assets\Turret.cs" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\EffectExamples\Shared\Shaders\SurfaceShader_VC.shader" />
@@ -138,37 +152,37 @@
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/songd/Desktop/Maze-Game/CEN4020 Maze Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/songd/Desktop/Maze-Game-presentation/CEN4020 Maze Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

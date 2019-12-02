@@ -17,6 +17,13 @@ public class ObjectiveTracker : MonoBehaviour
         //txt.text = quest.getRequirements();
     }
 
+    public bool isComplete()
+    {
+        if (quest.isComplete())
+            return true;
+        return false;
+    }
+
     // Update is called once per frame
     void Update()
     {

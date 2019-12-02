@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    float moveSpeed = 3f;
+    float moveSpeed = 4f;
     Rigidbody2D rb;
     PlayerMovement target;
     Vector2 Direction;
@@ -16,7 +16,7 @@ public class Projectile : MonoBehaviour
         target = GameObject.FindObjectOfType<PlayerMovement>();
         Direction = (target.transform.position - transform.position).normalized * moveSpeed;
         rb.velocity = new Vector2(Direction.x, Direction.y);
-        Destroy(gameObject, 2f);
+        Destroy(gameObject, 3f);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -10,7 +10,6 @@ public class PauseMenu : MonoBehaviour
     public static bool IsPaused = false;
 
     public GameObject pauseMenu;
-    public GameObject optionsMenu;
     public GameObject deadMenu;
     public GameObject winMenu;
 
@@ -82,36 +81,7 @@ public class PauseMenu : MonoBehaviour
                     }
                     else if (index == 1)
                     {
-                        optionsMenu.SetActive(true);
-                        pauseMenu.SetActive(false);
-                        maxIndex = 3;
-                        index = 0;
-                    }
-                    else if (index == 2)
-                    {
                         QuitGame();
-                    }
-                }
-                if (optionsMenu.activeSelf == true)
-                {
-                    if (index == 0)
-                    {
-                        
-                    }
-                    else if (index == 1)
-                    {
-                        
-                    }
-                    else if (index == 2)
-                    {
-                        
-                    }
-                    else if (index == 3)
-                    {
-                        optionsMenu.SetActive(false);
-                        pauseMenu.SetActive(true);
-                        maxIndex = 2;
-                        index = 1;
                     }
                 }
                 if (deadMenu.activeSelf == true)
@@ -126,11 +96,6 @@ public class PauseMenu : MonoBehaviour
                     {
                         QuitGame();
                     }
-                    else if (index == 2)
-                    {
-                        Debug.Log("QUIT");
-                        Application.Quit();
-                    }
                 }
                 if (winMenu.activeSelf == true)
                 {
@@ -139,17 +104,18 @@ public class PauseMenu : MonoBehaviour
                         //Next Level
                         Time.timeScale = 1f;
                         IsPaused = false;
-                        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+                        if ((SceneManager.GetActiveScene().buildIndex) == 5)
+                            SceneManager.LoadScene(1);
+                        else
+                            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
                     }
                     else if (index == 1)
                     {
+                        Debug.Log("this right here");
                         //go to main menu
                         QuitGame();
-                    }
-                    else if (index == 1)
-                    {
-                        Debug.Log("QUIT");
-                        Application.Quit();
                     }
                 }
             }

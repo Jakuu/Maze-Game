@@ -16,16 +16,12 @@ public class PlayerMovement : MonoBehaviour
     private GameObject instObject;
     public float moveSpeed = 5f;
     public int health = 300;
+    public int lives = 3;
     public Rigidbody2D rb;
 
     Vector2 movement;
 
     bool pause = false;
-
-    private void Start()
-    {
-        health = 300;
-    }
 
 
     // Update is called once per frame
@@ -67,18 +63,30 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(invin()); //invincible for short period after hit
         }
 
-        if (health == 0)  //if die
+        if (col.gameObject.tag.Equals("Projectile"))
         {
-            instObject = (GameObject)Instantiate(hit, transform.position, transform.rotation); //create explosion temp object
-            Destroy(instObject, 1f); //destroy temp explosion object
-                                     //this.transform.position = spawn.transform.position; //respawn
-                                     //gameObject.SetActive(false);
-                                     //Time.timeScale = 0f;  
-            this.transform.position = spawn.transform.position;
-
-            //StartCoroutine(wait());       
-            //pause = true;
+            health = health - 50;
+            GetComponent<SpriteRenderer>().color = Color.red; //flash red on damage
+            StartCoroutine(invin()); //invincible for short period after hit
         }
+
+        if (health == 0)  //if no health lose a life
+        {
+            //lives = lives - 1;
+            //instObject = (GameObject)Instantiate(hit, transform.position, transform.rotation); //create explosion temp object
+            //Destroy(instObject, 1f); //destroy temp explosion object
+            //this.transform.position = spawn.transform.position;
+            pause = true;
+            Physics2D.IgnoreLayerCollision(9, 10, false);
+            health = 300;
+        }
+
+        /*
+        if (lives == 0)
+        { //no lives game over
+            pause = true; //dead menu
+        }
+        */
 
         IEnumerator invin()
         {
@@ -89,10 +97,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    IEnumerator wait()
-    {
-        yield return new WaitForSeconds(2);
-
-    }
 
 }

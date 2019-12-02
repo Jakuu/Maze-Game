@@ -6,6 +6,7 @@ public class PowerUp_ : MonoBehaviour
 {
     public int add = 25;
 
+
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
