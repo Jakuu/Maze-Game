@@ -23,10 +23,10 @@ MonoBehaviour:
     y: 30
     width: 1536
     height: 732
-  m_MinSize: {x: 945, y: 422}
-  m_MaxSize: {x: 22002, y: 10000}
+  m_MinSize: {x: 949, y: 444}
+  m_MaxSize: {x: 22004, y: 10000}
   vertical: 0
-  controlID: 5640
+  controlID: 2196
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -129,10 +129,10 @@ MonoBehaviour:
     y: 0
     width: 388
     height: 732
-  m_MinSize: {x: 240, y: 422}
-  m_MaxSize: {x: 4002, y: 8022}
+  m_MinSize: {x: 242, y: 444}
+  m_MaxSize: {x: 4002, y: 8044}
   vertical: 1
-  controlID: 5609
+  controlID: 2093
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,9 +198,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.9903283, y: -2.0077002, z: -2.8097017}
+    m_Target: {x: -14.4, y: 4.8, z: 0}
     speed: 2
-    m_Value: {x: -2.9903283, y: -2.0077002, z: -2.8097017}
+    m_Value: {x: -14.4, y: 4.8, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -233,9 +233,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 11.890761
+    m_Target: 1.7121876
     speed: 2
-    m_Value: 11.890761
+    m_Value: 1.7121876
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -540,8 +540,8 @@ MonoBehaviour:
     y: 364
     width: 388
     height: 368
-  m_MinSize: {x: 240, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 242, y: 222}
+  m_MaxSize: {x: 4002, y: 4022}
   m_ActualView: {fileID: 10}
   m_Panes:
   - {fileID: 9}
@@ -665,7 +665,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: 9cc0ffffcec3ffffa2c8ffffc6cbfffffeceffff38d2ffff74fbffff
+      m_ExpandedIDs: 74fbffff964a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -753,20 +753,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SkipHidden: 0
     m_SearchArea: 1
-    m_Folders:
-    - Assets/Scripts
+    m_Folders: []
   m_ViewMode: 0
   m_StartGridSize: 64
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: C:\Users\songd\Desktop\Maze-Game-presentation\CEN4020 Maze Game
+  m_LastProjectPath: C:\Users\songd\Desktop\Maze-Game\CEN4020 Maze Game
   m_LockTracker:
     m_IsLocked: 1
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: f23b0000
     m_LastClickedID: 15346
-    m_ExpandedIDs: ffffffff00000000582e00005e2e000014380000e0390000be3a0000c23a0000243c0000463d0000803d0000cc3e0000d43e00003e3f0000403f00001c400000b44200005e4300002e44000058450000484600000a47000018470000b64e0000
+    m_ExpandedIDs: ffffffff000000005a2e0000602e000016380000e2390000c03a0000c43a0000283c00004a3d0000843d0000d03e0000d83e0000423f0000443f000020400000b842000062430000324400005c4500004c4600000e4700001c470000d04e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -791,10 +790,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 190.50037}
-    m_SelectedIDs: f2260000
-    m_LastClickedID: 9970
-    m_ExpandedIDs: ffffffff00000000582e00005e2e000014380000e0390000be3a0000c23a0000243c0000463d0000803d0000cc3e0000d43e00003e3f0000403f00001c400000b44200005e4300002e44000058450000484600000a47000018470000b64e0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f2480000
+    m_LastClickedID: 0
+    m_ExpandedIDs: ffffffff000000005a2e0000602e000016380000e2390000c03a0000c43a0000283c00004a3d0000843d0000d03e0000d83e0000423f0000443f000020400000b842000062430000324400005c4500004c4600000e4700001c470000d04e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -819,8 +818,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: f2260000
-    m_LastClickedInstanceID: 9970
+    m_SelectedInstanceIDs: f2480000
+    m_LastClickedInstanceID: 18674
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:

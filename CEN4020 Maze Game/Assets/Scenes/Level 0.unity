@@ -6336,6 +6336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tri-Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7437021261220253349, guid: 264bf94264a4c754dac74e3b547f5c4f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 7437021261220253336, guid: 264bf94264a4c754dac74e3b547f5c4f,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6374,7 +6379,7 @@ PrefabInstance:
     - target: {fileID: 7437021261220253336, guid: 264bf94264a4c754dac74e3b547f5c4f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 7437021261220253336, guid: 264bf94264a4c754dac74e3b547f5c4f,
         type: 3}
@@ -6390,6 +6395,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 89.609
+      objectReference: {fileID: 0}
+    - target: {fileID: 7437021261220253350, guid: 264bf94264a4c754dac74e3b547f5c4f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7437021261220253339, guid: 264bf94264a4c754dac74e3b547f5c4f, type: 3}
@@ -6682,12 +6692,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1274321468}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -14.4, y: 4.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1281360648
 GameObject:
@@ -7135,7 +7145,7 @@ PrefabInstance:
     - target: {fileID: 3952631357545382328, guid: 163ac9679c591c94185142d4f4afdb58,
         type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3952631357545382328, guid: 163ac9679c591c94185142d4f4afdb58,
         type: 3}

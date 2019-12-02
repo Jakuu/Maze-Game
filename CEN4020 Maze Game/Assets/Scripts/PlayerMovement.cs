@@ -72,21 +72,23 @@ public class PlayerMovement : MonoBehaviour
 
         if (health == 0)  //if no health lose a life
         {
-            //lives = lives - 1;
-            //instObject = (GameObject)Instantiate(hit, transform.position, transform.rotation); //create explosion temp object
-            //Destroy(instObject, 1f); //destroy temp explosion object
-            //this.transform.position = spawn.transform.position;
-            pause = true;
+            lives = lives - 1;
+            instObject = (GameObject)Instantiate(hit, transform.position, transform.rotation); //create explosion temp object
+            Destroy(instObject, 1f); //destroy temp explosion object
+            this.transform.position = spawn.transform.position;
+           
+            //pause = true;
             Physics2D.IgnoreLayerCollision(9, 10, false);
             health = 300;
         }
 
-        /*
+        
         if (lives == 0)
         { //no lives game over
+            StartCoroutine(wait());
             pause = true; //dead menu
         }
-        */
+        
 
         IEnumerator invin()
         {
@@ -94,6 +96,11 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(2f); // wait time
             GetComponent<SpriteRenderer>().color = Color.white;
             Physics2D.IgnoreLayerCollision(9, 10, false);
+        }
+
+        IEnumerator wait()
+        {
+         yield return new WaitForSeconds(0.5f); // wait time
         }
     }
 
