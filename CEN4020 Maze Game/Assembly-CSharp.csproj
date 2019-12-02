@@ -74,7 +74,6 @@
      <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Bar.cs" />
      <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Mesh.cs" />
      <Compile Include="Assets\_\Stuff\CodeMonkey\Utils\World_Sprite.cs" />
-     <Compile Include="Assets\BonusLvl_TriggerEvent.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\DecalDestroyer.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\ExtinguishableFire.cs" />
      <Compile Include="Assets\EffectExamples\Shared\Scripts\GunAim.cs" />
@@ -88,6 +87,7 @@
      <Compile Include="Assets\MenuController.cs" />
      <Compile Include="Assets\PauseMenu.cs" />
      <Compile Include="Assets\PauseMenuButton.cs" />
+     <Compile Include="Assets\Scripts\BonusLvl_TriggerEvent.cs" />
      <Compile Include="Assets\Scripts\ButtonTrigger.cs" />
      <Compile Include="Assets\Scripts\Clock.cs" />
      <Compile Include="Assets\Scripts\Clock_Weighted.cs" />

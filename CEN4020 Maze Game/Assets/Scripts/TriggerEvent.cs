@@ -15,7 +15,6 @@ public class TriggerEvent : MonoBehaviour
 
     public GameObject player;
     public GameObject highScoreTable;
-    public GameObject errMsg;
     public GameObject background;
     public string tableName;
     public GetQuests objectiveTracker;
@@ -53,7 +52,6 @@ public class TriggerEvent : MonoBehaviour
         GetLeaderboardNameUI.SetActive(false);
         HighScoreUI.SetActive(false);
         leaderboard = highScoreTable.GetComponent<HighscoreTable>();
-        errMsg.SetActive(false);
         background.SetActive(false);
     }
 
@@ -203,7 +201,6 @@ public class TriggerEvent : MonoBehaviour
                     leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
                     leaderboardName.text = "";
                     Time.timeScale = 0f;
-                    errMsg.SetActive(false);
                     winMenu.SetActive(true);
                     HighScoreUI.SetActive(true);
                     background.SetActive(false);
@@ -214,19 +211,6 @@ public class TriggerEvent : MonoBehaviour
             }
             yield return null; // wait until next frame, then continue execution from here (loop continues)
         }
-    }
-
-
-
-
-
-    private IEnumerator errorMessage()
-    {
-        // set error message active
-        errMsg.SetActive(true);
-
-        yield return new WaitForSeconds(1.0f);
-
     }
 
 

@@ -5321,7 +5321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807650782}
   highScoreTable: {fileID: 18944623}
-  errMsg: {fileID: 1759728350}
+  errMsg: {fileID: 0}
   background: {fileID: 150466565}
   tableName: _level2_highscoretable
   objectiveTracker: {fileID: 0}
@@ -5940,22 +5940,6 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 562638802, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
-      propertyPath: obj1
-      value: 
-      objectReference: {fileID: 1641626630}
-    - target: {fileID: 562638802, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
-      propertyPath: obj2
-      value: 
-      objectReference: {fileID: 1154016810}
-    - target: {fileID: 562638802, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
-      propertyPath: obj3
-      value: 
-      objectReference: {fileID: 271847162}
-    - target: {fileID: 86380234, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
-      propertyPath: obj
-      value: 
-      objectReference: {fileID: 271847162}
     - target: {fileID: 485463067, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
       propertyPath: m_AnchorMin.y
       value: 0
@@ -5982,6 +5966,22 @@ PrefabInstance:
       objectReference: {fileID: 1154016810}
     - target: {fileID: 485463068, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
       propertyPath: obj3
+      value: 
+      objectReference: {fileID: 271847162}
+    - target: {fileID: 562638802, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
+      propertyPath: obj1
+      value: 
+      objectReference: {fileID: 1641626630}
+    - target: {fileID: 562638802, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
+      propertyPath: obj2
+      value: 
+      objectReference: {fileID: 1154016810}
+    - target: {fileID: 562638802, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
+      propertyPath: obj3
+      value: 
+      objectReference: {fileID: 271847162}
+    - target: {fileID: 86380234, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
+      propertyPath: obj
       value: 
       objectReference: {fileID: 271847162}
     - target: {fileID: 141383245, guid: 30edaa2d33d3f49d59aee3312c6d10e8, type: 3}
@@ -9484,7 +9484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 1807650782}
   highScoreTable: {fileID: 18944623}
-  errMsg: {fileID: 1759728350}
+  errMsg: {fileID: 0}
   background: {fileID: 150466565}
   tableName: _level2_highscoretable
   objectiveTracker: {fileID: 0}
@@ -9592,85 +9592,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1759728350
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1759728351}
-  - component: {fileID: 1759728353}
-  - component: {fileID: 1759728352}
-  m_Layer: 5
-  m_Name: ErrorMessage
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1759728351
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759728350}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 2131998149}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 38.999977, y: -0.000024796}
-  m_SizeDelta: {x: 1223.5, y: 180.2}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1759728352
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759728350}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 12800000, guid: 367b1e52412a345258e5b4641ef40f5a, type: 3}
-    m_FontSize: 100
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 0
-    m_MaxSize: 100
-    m_Alignment: 3
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Please enter a unique name
---- !u!222 &1759728353
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759728350}
-  m_CullTransparentMesh: 0
 --- !u!1 &1777947929
 GameObject:
   m_ObjectHideFlags: 0
@@ -12334,7 +12255,6 @@ RectTransform:
   - {fileID: 1998933725}
   - {fileID: 577103285}
   - {fileID: 1118849914}
-  - {fileID: 1759728351}
   - {fileID: 1424744507}
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -12744,7 +12664,7 @@ PrefabInstance:
         type: 3}
       propertyPath: errMsg
       value: 
-      objectReference: {fileID: 1759728350}
+      objectReference: {fileID: 0}
     - target: {fileID: 7987535544164461242, guid: 1baf8ce652311cb4da81b9d171347aef,
         type: 3}
       propertyPath: tableName

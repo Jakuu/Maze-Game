@@ -15,7 +15,6 @@ public class Level3Goal : MonoBehaviour
 
 	public GameObject player;
 	public GameObject highScoreTable;
-	public GameObject errMsg;
 	public GameObject background;
 	public string tableName;
 	public GetQuests objectiveTracker;
@@ -53,7 +52,6 @@ public class Level3Goal : MonoBehaviour
 		GetLeaderboardNameUI.SetActive(false);
 		HighScoreUI.SetActive(false);
 		leaderboard = highScoreTable.GetComponent<HighscoreTable>();
-		errMsg.SetActive(false);
 		background.SetActive(false);
 	}
 
@@ -203,7 +201,6 @@ public class Level3Goal : MonoBehaviour
 					leaderboard.AddHighscoreEntry(stats.score, leaderboardName.text);
 					leaderboardName.text = "";
 					Time.timeScale = 0f;
-					errMsg.SetActive(false);
 					winMenu.SetActive(true);
 					HighScoreUI.SetActive(true);
 					background.SetActive(false);
@@ -218,16 +215,6 @@ public class Level3Goal : MonoBehaviour
 
 
 
-
-
-	private IEnumerator errorMessage()
-	{
-		// set error message active
-		errMsg.SetActive(true);
-
-		yield return new WaitForSeconds(1.0f);
-
-	}
 
 
 	private class Highscores
