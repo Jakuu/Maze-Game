@@ -7,7 +7,8 @@ public class ChaseTarget : MonoBehaviour
     public Transform Player;
     public int MoveSpeed = 2;
     public float shootDist = 10; //maxdistance to shoot from
-    public float MinDist = 5; //collision minimum distance
+    public float MinDist = 10; //collision minimum distance
+    public float Zero = 0;
 
 
     // Update is called once per frame
@@ -16,7 +17,7 @@ public class ChaseTarget : MonoBehaviour
 
         transform.LookAt(Player);
 
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
+        if (Vector3.Distance(transform.position, Player.position) >= 0 && (Vector3.Distance(transform.position, Player.position) <= MinDist))
         {
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
 

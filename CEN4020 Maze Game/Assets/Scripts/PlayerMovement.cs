@@ -72,23 +72,24 @@ public class PlayerMovement : MonoBehaviour
 
         if (health == 0)  //if no health lose a life
         {
-            lives = lives - 1;
+            //lives = lives - 1;
             instObject = (GameObject)Instantiate(hit, transform.position, transform.rotation); //create explosion temp object
             Destroy(instObject, 1f); //destroy temp explosion object
             this.transform.position = spawn.transform.position;
            
-            //pause = true;
+            pause = true;
             Physics2D.IgnoreLayerCollision(9, 10, false);
-            health = 300;
         }
 
-        
+        /*
         if (lives == 0)
         { //no lives game over
             StartCoroutine(wait());
             pause = true; //dead menu
+            Physics2D.IgnoreLayerCollision(9, 10, false);
+
         }
-        
+        */
 
         IEnumerator invin()
         {
