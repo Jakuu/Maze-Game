@@ -4,7 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Item
+  - Enemy
+  - Wall
+  - Spy-Enemy
+  - Tri-Enemy
+  - highscoreEntryContainer
+  - highscoreEntryTemplate
+  - music
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -14,9 +21,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - Wall
+  - Player
+  - Enemy
   - 
   - 
   - 
